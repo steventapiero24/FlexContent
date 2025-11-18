@@ -224,7 +224,7 @@ export default function ImageTrail({ items = [], variant = 1 }) {
     <div className="content" ref={containerRef}>
       <div className='container__hero-content width-100'>
         <h1 ref={h1Ref}>Transformo tu negocio local en una marca digital moderna</h1>
-        <p ref={pRef}>Creo marcas y páginas web que ayudan a negocios locales a destacar, atraer clientes y vender más, sin complicaciones.</p>
+        <p ref={pRef}>Diseño, video y estrategia para negocios locales que quieren crecer online.</p>
       </div>
       {items.map((url, i) => (
         <div className="content__img" key={i}>
