@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  --color-primary: #211AC0;
+  --color-secondary: #F25824;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-black-rgba: rgba(17, 17, 18, 0.952);
+  --font-size-base: 16px;
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
+  --border-radius-base: 4px;
+  --border-width-base: 1px;
+  --border-color-base: #d0d0d0;
+
+}
