@@ -521,7 +521,7 @@
   display: flex;
   gap: 1.5rem;
   border-radius: 4px;
-  background-color: var(--color-black-rgba);
+  background-color: var(--color-secondary);
   flex: 1;
   justify-content: flex-start;
   h3 {
@@ -533,19 +533,18 @@
   }
   ul {
     font-size: 1.1rem;
-    min-height: 330px;
     line-height: 28px;
   }
   span {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 700;
   }
   .entrega {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 200;
     color: var(--color-white);
     opacity: 0.9;
-    transform: translateY(-30px);
+    transform: translateY(-40px);
   }
   .item-card {
     content: "";
@@ -558,10 +557,6 @@
     margin-right: 10px;
     opacity: 0.7;
   }
-  
-}
-.card-prices:nth-child(2) {
-  background-color: var(--color-secondary);
 }
 
 /* Sobre mi  */
@@ -648,7 +643,29 @@
   }
 }
 
+.css-cy7rkm-MuiAccordion-heading {
+  height: 75px !important;
+  display: flex !important;
+}
 
+.MuiAccordion-heading span {
+  font-family: var();
+  font-size: 1.3rem !important;
+  font-weight: 800;
+}
+.MuiAccordion-heading svg {
+  color: var(--color-secondary) !important;
+};
+
+.css-1lj39kh-MuiAccordionDetails-root {
+  background-color: #ececec !important;
+  padding: 1.2rem !important;
+}
+
+.css-1lj39kh-MuiAccordionDetails-root p {
+  font-size: 1.1rem !important;
+  color: var(--color-black-rgba);
+}
 
 /* Other Services */
 .container__otherServices {

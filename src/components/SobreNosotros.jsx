@@ -44,7 +44,7 @@ const SobreNosotros = () => {
 
       // --- Animación del bloque flotante ---
       const floatingEl = containerRef.current.querySelector(".container__content-floating");
-      const floatingElements = floatingEl.querySelectorAll("h5, h3, p, button");
+      const floatingElements = floatingEl.querySelectorAll("h5, h3, p");
 
       // Animación del contenedor completo
       gsap.from(floatingEl, {

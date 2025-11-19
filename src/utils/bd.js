@@ -84,66 +84,27 @@ export const imagesBenefits = [
 
 export const tarifas = [
   {
-    title: "Esencial",
-    descriptions: "Ideal para negocios que quieren empezar a tener visibilidad online.",
+    title: "Pack - Todo en uno",
+    descriptions: "Ideal para negocios que quieren tener visibilidad online.",
     includes: {
       list: [
-        "Logotipo profesional y paleta de colores",
+        "Logotipo profesional y paleta de colores (Si aun no la tienes)",
         "Tipografías y estilo visual de marca",
         "Mini manual de identidad (PDF)",
         "Diseño web moderno y adaptable a móviles",
-        "1 a 5 secciones (Inicio, Servicios, Contacto, etc)",
-        "Botón directo a WhatsApp o redes sociales",
-        "Personalización con tus colores y logotipo",
-        "Enlace a Google Maps / ubicación",
-        "Optimización para Google",
+        "Estrategia para redes sociales, webs, marca y lanzamientos",
+        "Fotografias de tu negocio y productos",
+        "Preproduccion, Produccion y postproduccion de video",
+        "Edición de video con motion graphics (Animaciones)",
+        "Tu negocio en Google Maps",
+        "produccion completa de contenidos para redes sociales, web, impresiones,etc",
+        "Acompñamiento y asesoría durante todo el proceso",
       ]
     },
 
-    result: "Tu negocio tendrá una imagen moderna, coherente y profesional, con una web lista para mostrar y compartir.",
-    price: 450,
-    Entrega: "Entrega: 7 a 10 días"
-  },
-  {
-    title: "Profesional",
-    descriptions: "Negocios que ya tienen presencia en redes o clientes, pero quieren atraer más",
-    includes: {
-      list: [
-        "Todo lo del plan esencial",
-        "Logotipo avanzado (con versiones, icono, usos)",
-        "Manual de marca completo (colores, tipografías, estilos, ejemplos)",
-        "Web de 4 a 6 secciones (Inicio, Servicios, Nosotros, Galería, Contacto, Reservas o Catálogo)",
-        "Copywriting adaptado a tu negocio (textos que venden)",
-        "SEO local (para aparecer en Google)",
-        "Capacitación para que puedas actualizar tu web",
-        "Pasarela de pagos y/o reservas",
-      ]
-    },
-
-    result: "Tu marca lucirá profesional, coherente y enfocada en resultados. Tu web se convierte en tu mejor vendedor.",
-    price: 750,
-    Entrega: "Entrega: 7 a 10 días"
-  },
-  {
-    title: "Premium",
-    descriptions: "Ideal para negocios que quieren empezar a tener visibilidad online.",
-    includes: {
-      list: [
-        "Todo lo del Plan Profesional",
-        "Estrategia de posicionamiento de marca",
-        "Diseño de logotipo + branding completo",
-        "Web personalizada (tienda online, reservas, blog o landing de campañas)",
-        "Integración con herramientas de marketing (Meta, Analytics, Email, etc.)",
-        "SEO avanzado y optimización de velocidad",
-        "Personalización con tus colores y logotipo",
-        "Plantillas para redes sociales",
-        "Sesión de asesoría personalizada (estrategia digital + comunicación visual)",
-      ]
-    },
-
-    result: "Tu negocio tendrá una imagen moderna, coherente y profesional, con una web lista para mostrar y compartir.",
-    price: 450,
-    Entrega: "Entrega: 7 a 10 días"
+    result: "Tu negocio tendrá una imagen moderna, coherente y profesional, lista para mostrar y compartir.",
+    price: 650,
+    Entrega: "Mes a mes"
   }
 ]
 
@@ -210,50 +171,57 @@ export const Services = [
   },
 ]
 
-export const cardsForWhat = [
+export const Accordion = [
   {
-    title: "Experiencia real en diseño y desarrollo web",
-    description: "Mas de 6",
-    urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
-    items: {
-      value: [
-        "item uno",
-        "item dos"
-      ]
-    }
+    question: "¿Qué incluye exactamente el servicio de 600 €/mes?",
+    answer: "Incluye estrategia de contenido, diseño de publicaciones, grabación y edición de videos, creación de reels, gestión de redes sociales y optimización del perfil de tu marca. Es un servicio completo para que tu negocio tenga una presencia digital profesional sin preocuparte por nada.",
   },
   {
-    title: "Combino branding + diseño + estrategia",
-    description: "Todo en uno",
-    urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
-    items: {
-      value: [
-        "item uno",
-        "item dos"
-      ]
-    },
-    className: "prymary"
+    question: "¿Cuántas publicaciones recibo al mes?",
+    answer: "Entre 8 y 12 piezas de contenido (carruseles, imágenes o diseños) + 4 videos grabados y editados + 4 reels adicionales creados a partir de contenido existente o grabado. sin embargo podrian aumentar si tienes requerimientos de impresion, flyers o promosionales.",
   },
   {
-    title: "Entrego rápido, sin tecnicismos",
-    description: "Diseño de logotipo",
-    urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
-    items: {
-      value: [
-        "item uno",
-        "item dos"
-      ]
-    }
+    question: "¿Cuántas redes sociales gestionas con este pack?",
+    answer: "Generalmente 1 red principal (Instagram, Tik tok), donde revisemos que sea mejor el enfoquem pero podemos usar ese mismo contenido para repetir en Facebook o TikTok, si es relevante para tu negocio o crear varioaciones, todo depende de tus necesidades.",
   },
   {
-    title: "Acompaño todo el proceso ",
-    description: "no te dejo solo con la web",
-    urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
-    items: {
-      value: [
-        "item uno",
-        "item dos"
-      ]
-    }
+    question: "¿Tienes permanencia o contrato mínimo?",
+    answer: "No. Trabajo mes a mes, sin permanencia. Si te funciona, seguimos; si no, puedes cancelar cuando quieras. Recuerda que en redes minimo son 2 a 3 meses para ver resultads en tu negocio.",
+  },
+  {
+    question: "¿Cómo funciona la grabación de los videos?",
+    answer: "Cada mes se realiza una sesión de grabación (en tu local o en mi estudio). Grabamos contenido suficiente para crear varios videos y reels durante el mes. Si estás fuera de mi zona, podemos coordinar grabación online o enviarme videos para editarlos.",
+  },
+  {
+    question: "¿Editas videos que yo grabo con mi móvil?",
+    answer: "Sí. Si tú grabas contenido durante el mes, yo me encargo de editarlo, optimizarlo y adaptarlo a tu estilo visual.",
+  },
+  {
+    question: "¿Cómo sé qué vas a publicar cada mes?",
+    answer: "Antes de comenzar cada mes, te entrego un calendario editorial, donde verás: temas, fechas de publicación, estilo visual, ideas principales y nada se publica sin tu aprobación.",
+  },
+  {
+    question: "¿Puedo pedir revisiones o cambios?",
+    answer: "Sí. Tienes 2 rondas de cambios por cada pieza de contenido o video, para asegurar que todo quede perfecto.",
+  },
+  {
+    question: "¿Cuándo recibo los contenidos del mes?",
+    answer: "Entre la primera y segunda semana del mes, dependiendo de la grabación y estrategia. Los posts y videos se van programando para que tú no tengas que preocuparte por nada.",
+  },
+  {
+    question: "¿Puedo pedir contenido adicional?",
+    answer: "Por supuesto. Si necesitas contenido extra (más videos, más publicaciones o diseño adicional), puedo añadirlo con una tarifa extra accesible.",
+  },
+  {
+    question: "¿Qué necesito para empezar?",
+    answer: "Nada complicado solo: Tu logo o identidad actual (si tienes), acceso a tus redes sociales, una reunión inicial de 20 minutos para entender tu negocio, el primer mes pago, yo me encargo del resto.",
+  },
+  {
+    question: "¿Cuánto tardan en verse resultados?",
+    answer: "Normalmente, los primeros cambios se ven desde el primer mes: Mejor estética, mejor engagement, más visitas al perfil, mejor percepción del negocio, el crecimiento sostenido empieza a verse entre 2 y 3 meses, dependiendo del sector. ",
+  },
+  {
+    question: "¿Qué pasa si no tengo marca o no tengo página web?",
+    answer: "Perfecto, también puedo ayudarte con eso. Puedo crear tu branding y tu página web en para que tengas una presencia online, si quieres solo esto podemos manejarlo como servicio adicional sin compromiso de adquirir el pack completo.",
   },
 ]

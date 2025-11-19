@@ -50,9 +50,9 @@ const CardPrices = () => {
           ref={(el) => (cardsRef.current[index] = el)}
           className="flex flex-col card-prices flex-nowrap"
         >
-          <h3>{tarifa.title}</h3>
+          <h2>{tarifa.title}</h2>
           <p>{tarifa.descriptions}</p>
-          <ul>
+          <ul className="flex flex-col">
             {tarifa.includes.list.map((item, itemIndex) => (
               <li key={itemIndex}>
                 <div className="item-card"></div>
@@ -60,6 +60,7 @@ const CardPrices = () => {
               </li>
             ))}
           </ul>
+          <p>{tarifa.result}</p>
           <span>{tarifa.price}€</span>
           <span className="entrega">{tarifa.Entrega}</span>
         </div>

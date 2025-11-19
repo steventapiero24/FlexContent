@@ -1,10 +1,11 @@
-import CardForWhat from './Atomos/CardForWhat'
+import Accordion from "./Atomos/Accordion.jsx";
+
 
 const Comparation = () => {
     return (
         <div className="relative forwhat__container">
-            <h2>Por que elegirme </h2>
-            <CardForWhat />
+            <h2>Todo lo que debes saber </h2>
+            <Accordion />
         </div>
     )
 }
