@@ -36,7 +36,7 @@ export const images = [
 
 export const imagesBenefits = [
   {
-    url: "/public/img/reactcartera.webp",
+    url: "/public/img/strategy.webp",
     title: "Estrategia",
     description: ["Diseño de logotipo",
       "Análisis del negocio",
@@ -47,7 +47,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/public/img/idsob.webp",
+    url: "/public/img/design.webp",
     title: "Diseño grafico y web",
     description: ["Diseño de logotipo",
       "Carruseles",
@@ -59,7 +59,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/public/img/idbangular.webp",
+    url: "/public/img/camerascine.webp",
     title: "Producción de video",
     description: ["4 videos grabados y editados",
       "4 reels adicionales reutilizando contenido",
@@ -70,7 +70,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/public/img/seguros.webp",
+    url: "/public/img/socialmedia.webp",
     title: "Gestión completa de redes",
     description: ["Estrategia y planeacion",
       "Publicación y programación",

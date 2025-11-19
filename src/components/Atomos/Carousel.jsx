@@ -6,44 +6,44 @@ import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from 'react-icons/fi
 
 const DEFAULT_ITEMS = [
   {
-    title: 'Text Animations',
-    description: 'Cool text animations for your projects.',
-    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    title: 'Andrea Tapiero',
+    description: 'Manicurista y nail artist',
+    reseña: "Todo un profesional, mi marca de uñas nunca se había visto tan bien como con su trabajo. Muy recomendable para quienes buscan calidad y creatividad y no saben mucho de diseño.",
     id: 1,
     icon: <FiFileText className="carousel-icon" />,
-    image: "https://picsum.photos/id/1001/300/300"
+    image: "/public/img/nelanails.webp"
   },
   {
-    title: 'Animations',
-    description: 'Smooth animations for your projects.',
+    title: 'Laura Méndez',
+    description: 'Directora de Marketing – Truvant',
     id: 2,
-    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    reseña: "Nos crearon una identidad visual moderna y una web rápida que ha duplicado nuestras reservas online. El contenido para redes transmite exactamente la sensación de aventura que queríamos. Fue un antes y un después en nuestra marca",
     icon: <FiCircle className="carousel-icon" />,
-    image: "https://picsum.photos/id/1001/300/300"
+    image: "/public/img/truvant.webp"
   },
   {
-    title: 'Components',
-    description: 'Reusable components for your projects.',
+    title: 'Sergio Villalba',
+    description: 'Bitacora',
     id: 3,
-    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    reseña: "Lo que más nos sorprendió fue la estrategia visual que plantearon. Gracias a sus diseños y gestión de redes, ahora recibimos consultas todos los días. Son un equipo que realmente entiende el sector turístico.",
     icon: <FiLayers className="carousel-icon" />,
-    image: "https://picsum.photos/id/1001/300/300"
+    image: "/public/img/bitacora.webp"
   },
   {
-    title: 'Backgrounds',
-    description: 'Beautiful backgrounds and patterns for your projects.',
+    title: 'Gloria Isabel',
+    description: 'Futuro valor',
     id: 4,
-    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    reseña: "Necesitábamos una imagen profesional para competir en el mercado educativo. El branding, la web y la estrategia de contenido fueron exactamente lo que buscábamos. Ahora nuestros cursos tienen identidad, son fáciles de encontrar y se vean profesionales.",
     icon: <FiLayout className="carousel-icon" />,
-    image: "https://picsum.photos/id/1001/300/300"
+    image: "/public/img/futurovalor.webp"
   },
   {
-    title: 'Common UI',
-    description: 'Common UI components are coming soon!',
+    title: 'World Vision',
+    description: 'Valentina Gonzales',
     id: 5,
-    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    reseña: "El cambio de nuestra marca fue total. Nuevos colores, nuevo logo y una web que por fin refleja calidad. Las fotos y creatividades para campañas han disparado las ventas de gafas",
     icon: <FiCode className="carousel-icon" />,
-    image: "https://picsum.photos/id/1001/300/300"
+    image: "/public/img/worldvision.webp"
   }
 ];
 

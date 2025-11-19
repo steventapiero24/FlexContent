@@ -119,7 +119,7 @@ const SobreNosotros = () => {
             Por eso creé este pack:
             Un servicio mensual donde me encargo de absolutamente todo, para que tu negocio tenga una presencia digital que atraiga clientes desde el primer mes
           </p>
-          <button className="btn btn-primary btn-lg">Agendar una llamada</button>
+          <button className="btn btn-secondary">Agendar una llamada</button>
         </div>
 
         <div className="container__content-Text width-50">
