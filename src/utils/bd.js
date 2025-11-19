@@ -37,22 +37,47 @@ export const images = [
 export const imagesBenefits = [
   {
     url: "/public/img/reactcartera.webp",
-    title: "Panaderia Gjulieta",
+    title: "Estrategia",
+    description: ["Diseño de logotipo",
+      "Análisis del negocio",
+      "Definición de estilo visual",
+      "Calendario editorial",
+      "Ideas de contenido ilimitadas",
+    ],
     link: "https://www.gjulieta.com/"
   },
   {
     url: "/public/img/idsob.webp",
-    title: "Espacio crudo",
+    title: "Diseño grafico y web",
+    description: ["Diseño de logotipo",
+      "Carruseles",
+      "Definición de estilo visual",
+      "Anuncios",
+      "Contenido informativo",
+      "Promociones y ofertas",
+    ],
     link: "https://www.gjulieta.com/"
   },
   {
     url: "/public/img/idbangular.webp",
-    title: "Clickerbait",
+    title: "Producción de video",
+    description: ["4 videos grabados y editados",
+      "4 reels adicionales reutilizando contenido",
+      "Guiones",
+      "Edición profesional",
+      "Motion graphics y animaciones",
+    ],
     link: "https://www.gjulieta.com/"
   },
   {
     url: "/public/img/seguros.webp",
-    title: "Branding Anela",
+    title: "Gestión completa de redes",
+    description: ["Estrategia y planeacion",
+      "Publicación y programación",
+      "Respuesta basica de comentarios",
+      "Optimización del perfil",
+      "Informe mensual de métricas",
+    ],
     link: "https://www.gjulieta.com/"
   },
 ]
@@ -130,8 +155,8 @@ export const Services = [
     urlImage: "https://www.gjulieta.com/",
     items: {
       value: [
-      "item uno",
-      "item dos"
+        "item uno",
+        "item dos"
       ]
     }
   },
@@ -178,8 +203,8 @@ export const Services = [
     urlImage: "https://www.gjulieta.com/",
     items: {
       value: [
-      "item uno",
-      "item dos"
+        "item uno",
+        "item dos"
       ]
     }
   },
@@ -192,8 +217,8 @@ export const cardsForWhat = [
     urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
     items: {
       value: [
-      "item uno",
-      "item dos"
+        "item uno",
+        "item dos"
       ]
     }
   },
@@ -203,8 +228,8 @@ export const cardsForWhat = [
     urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
     items: {
       value: [
-      "item uno",
-      "item dos"
+        "item uno",
+        "item dos"
       ]
     },
     className: "prymary"
@@ -215,20 +240,20 @@ export const cardsForWhat = [
     urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
     items: {
       value: [
-      "item uno",
-      "item dos"
+        "item uno",
+        "item dos"
       ]
     }
-  },  
+  },
   {
     title: "Acompaño todo el proceso ",
     description: "no te dejo solo con la web",
     urlImage: "https://cdn.pixabay.com/photo/2025/11/07/11/56/car-9942887_1280.jpg",
     items: {
       value: [
-      "item uno",
-      "item dos"
+        "item uno",
+        "item dos"
       ]
     }
-  },  
+  },
 ]

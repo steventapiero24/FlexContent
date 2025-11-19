@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { motion, useMotionValue, useTransform } from 'motion/react';
+import { motion as Motion, useMotionValue, useTransform } from 'motion/react';
 // replace icons with your own if needed
 import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from 'react-icons/fi';
 
@@ -8,32 +8,42 @@ const DEFAULT_ITEMS = [
   {
     title: 'Text Animations',
     description: 'Cool text animations for your projects.',
+    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
     id: 1,
-    icon: <FiFileText className="carousel-icon" />
+    icon: <FiFileText className="carousel-icon" />,
+    image: "https://picsum.photos/id/1001/300/300"
   },
   {
     title: 'Animations',
     description: 'Smooth animations for your projects.',
     id: 2,
-    icon: <FiCircle className="carousel-icon" />
+    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    icon: <FiCircle className="carousel-icon" />,
+    image: "https://picsum.photos/id/1001/300/300"
   },
   {
     title: 'Components',
     description: 'Reusable components for your projects.',
     id: 3,
-    icon: <FiLayers className="carousel-icon" />
+    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    icon: <FiLayers className="carousel-icon" />,
+    image: "https://picsum.photos/id/1001/300/300"
   },
   {
     title: 'Backgrounds',
     description: 'Beautiful backgrounds and patterns for your projects.',
     id: 4,
-    icon: <FiLayout className="carousel-icon" />
+    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    icon: <FiLayout className="carousel-icon" />,
+    image: "https://picsum.photos/id/1001/300/300"
   },
   {
     title: 'Common UI',
     description: 'Common UI components are coming soon!',
     id: 5,
-    icon: <FiCode className="carousel-icon" />
+    reseña: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At delectus voluptatibus, voluptas dolorem ea quas quam aspernatur quisquam odio nulla fugiat eos error natus ipsum alias, architecto numquam itaque fuga.",
+    icon: <FiCode className="carousel-icon" />,
+    image: "https://picsum.photos/id/1001/300/300"
   }
 ];
 
@@ -140,7 +150,7 @@ export default function Carousel({
         ...(round && { height: `${baseWidth}px`, borderRadius: '50%' })
       }}
     >
-      <motion.div
+      <Motion.div
         className="carousel-track"
         drag="x"
         {...dragProps}
@@ -162,7 +172,7 @@ export default function Carousel({
           // eslint-disable-next-line react-hooks/rules-of-hooks
           const rotateY = useTransform(x, range, outputRange, { clamp: false });
           return (
-            <motion.div
+            <Motion.div
               key={index}
               className={`carousel-item ${round ? 'round' : ''}`}
               style={{
@@ -176,18 +186,27 @@ export default function Carousel({
               <div className={`carousel-item-header ${round ? 'round' : ''}`}>
                 <span className="carousel-icon-container">{item.icon}</span>
               </div>
+              {/* render image for this carousel item when provided */}
+              {item.image && (
+                <div className="carousel-item-image">
+                  <img src={item.image} alt={item.title || 'carousel image'} />
+                </div>
+              )}
+              <div className='carousel-item-description-container'>
+                {item.reseña}
+              </div>
               <div className="carousel-item-content">
                 <div className="carousel-item-title">{item.title}</div>
                 <p className="carousel-item-description">{item.description}</p>
               </div>
-            </motion.div>
+            </Motion.div>
           );
         })}
-      </motion.div>
+      </Motion.div>
       <div className={`carousel-indicators-container ${round ? 'round' : ''}`}>
         <div className="carousel-indicators">
           {items.map((_, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               className={`carousel-indicator ${currentIndex % items.length === index ? 'active' : 'inactive'}`}
               animate={{

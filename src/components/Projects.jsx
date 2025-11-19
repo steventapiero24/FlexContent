@@ -81,9 +81,30 @@ gsap.fromTo(
     <div className="container__benefits" ref={sectionRef}>
       <div className="container__benefits-content flex">
         <div ref={textRef} className="width-50 fixed container__benefits-content-text flex-col">
-          <h2>Necesitas <br /> una web profesional?</h2>
-          <p>Tu cliente ya está buscando en Internet.
-            Si no te ve, compra en otro lado. Así de simple.</p>
+          <h2>¿Qué incluye este pack?</h2>
+          <p>No se trata solo de publicar por publicar.
+            Es contenido que:
+            </p>
+            <ul>
+              <li>
+                  ✔ Construye marca
+              </li>
+              <li>
+                  ✔ Aumenta la confianza
+              </li>
+              <li>
+                ✔ Atrae mejores clientes
+              </li>
+              <li>
+                ✔ Cuenta una historia
+              </li>
+              <li>
+                ✔ Se ve profesional
+              </li>
+            </ul>
+            <p>
+              Lo mejor es que tú no debes hacer nada, trabajamos de la mano pero yo me encargo de todo.
+            </p>
           <div style={{ height: '200px', position: 'relative', overflow: 'hidden' }}>
             <LogoLoop
               logos={techLogos}
@@ -109,6 +130,14 @@ gsap.fromTo(
               >
                 <img src={image.url} alt={image.title || ""} />
                 <h3>{image.title}</h3>
+                <ul>
+                  {image.description.map((item, index) => (
+                    <li key={index}>
+                      <div className='viñeta'></div>
+                      {item}
+                      </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

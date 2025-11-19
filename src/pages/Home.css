@@ -224,7 +224,7 @@
 }
 
 .container__benefits-content-images {
-    padding: 1.5rem;
+    padding: 3.5rem;
     position: relative;
 }
 .container__benefits-content-images-content {
@@ -233,8 +233,27 @@
     display: inline-block;
     h3 {
       position: absolute;
-      transform: translate(40px, -80px);
+      transform: translate(40px, -280px);
       z-index: 200;
+    }
+    ul {
+      transform: translate(40px, -210px);
+      z-index: 200;
+      position: absolute;
+      font-size: 1.5rem;
+    }
+    li {
+      display: flex;
+      align-items: center;
+    }
+    .viñeta {
+      width: 10px;
+      height: 10px;
+      transform: translatey(-2px);
+      background-color: var(--color-white);
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 10px;
     }
 }
 .container__benefits-content-images-content img {
@@ -243,12 +262,18 @@
     transition: 0.5s ease;
     
 }
-.container__benefits-content-images-content img:hover {
-      scale: 0.99;
-      filter: brightness(0.5);
-      cursor: pointer;
-    }
-
+.container__benefits-content-images-content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      background: linear-gradient(170deg, rgba(0, 0, 0, 0) 0%, rgba(28, 28, 28, 1) 100%);
+      z-index: 100;
+} 
+    
 
 
 
@@ -329,7 +354,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid #555;
-  border-radius: 24px;
+  border-radius: .5rem;
   padding: 16px;
   --outer-r: 24px;
   --p-distance: 12px;
@@ -349,10 +374,19 @@
   align-items: flex-start;
   justify-content: space-between;
   border: 1px solid #555;
-  border-radius: calc(var(--outer-r) - var(--p-distance));
-  background-color: #0d0716;
+  border-radius: .5rem;
+  background-color: var(--color-black);
   overflow: hidden;
   cursor: grab;
+  padding: 2rem;
+}
+
+
+.carousel-item-image img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .carousel-item:active {
@@ -395,29 +429,31 @@
 }
 
 .carousel-item-header {
-  margin-bottom: 16px;
-  padding: 20px;
+  width: 100%;
   padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .carousel-icon-container {
   display: flex;
+  padding: .2rem;
   height: 28px;
   width: 28px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .carousel-icon {
-  height: 16px;
-  width: 16px;
-  color: #060010;
+  height: 28px;
+  width: 28px;
+  color: var(--color-primary);
 }
 
 .carousel-item-content {
-  padding: 20px;
   padding-bottom: 20px;
 }
 
@@ -425,12 +461,18 @@
   margin-bottom: 4px;
   font-weight: 900;
   font-size: 18px;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .carousel-item-description {
   font-size: 14px;
-  color: #fff;
+  color: var(--color-white);
+}
+
+.carousel-item-description-container {
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--color-white);
 }
 
 .carousel-indicators-container {
@@ -456,11 +498,11 @@
 }
 
 .carousel-indicator.active {
-  background-color: #fff;
+  background-color: var(--color-secondary);
 }
 
 .carousel-indicator.inactive {
-  background-color: #555;
+  background-color: var(--color-black);
 }
 
 
