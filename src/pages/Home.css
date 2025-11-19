@@ -246,16 +246,16 @@
       display: flex;
       align-items: center;
     }
-    .viñeta {
-      width: 10px;
-      height: 10px;
-      transform: translatey(-2px);
-      background-color: var(--color-white);
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 10px;
-    }
-}
+  }
+  .viñeta {
+    width: 10px;
+    height: 10px;
+    transform: translatey(-2px);
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
 .container__benefits-content-images-content img {
     width: 100%;
     height: 100%;
@@ -687,6 +687,19 @@
   overflow: hidden;
   span {
     color: var(--color-secondary);
+  }
+  img {
+    height: 350px;
+    width: 350px;
+  }
+  ul {
+    display: flex !important;
+    font-size: 1.7rem;
+  }
+  p {
+    color: var(--color-black-rgba);
+    font-weight: 200;
+    text-align: center;
   }
 }
 

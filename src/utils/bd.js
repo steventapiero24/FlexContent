@@ -112,60 +112,68 @@ export const Services = [
   {
     number: "001",
     title: "Experiencia de usuario y prototipado",
-    description: "Diseño de logotipo",
-    urlImage: "https://www.gjulieta.com/",
+    description: "Diseño enfocado en la navegacion, accebilidad y usabilidad.",
+    urlImage: "/public/img/uiux.webp",
     items: {
       value: [
-        "item uno",
-        "item dos"
+        "Protipado en Figma",
+        "Maquetacion de diseño en Angular y react",
+        "Asesoria en UX/UI",
       ]
     }
   },
   {
     number: "002",
-    title: "Administracion y diseño de redes sociales",
-    description: "Diseño de logotipo",
-    urlImage: "https://www.gjulieta.com/",
+    title: "generacion de contenido con IA",
+    description: "Generacion de imagenes y videos con inteligencia artificial",
+    urlImage: "/public/img/ia.webp",
     items: {
       value: [
-        "item uno",
-        "item dos"
+        "Midjourney",
+        "Stable diffusion",
+        "DALLE",
       ]
     }
   },
   {
     number: "003",
     title: "Meta, Email, etc, Analytics",
-    description: "Diseño de logotipo",
-    urlImage: "https://www.gjulieta.com/",
+    description: "Pauta publicitaria, generacion de leads, análisis de datos",
+    urlImage: "/public/img/meta-analitycs.webp",
     items: {
       value: [
-        "item uno",
-        "item dos"
+        "Instagram Ads",
+        "Facebook Ads",
+        "Google Ads",
+        "Analytics",
       ]
     }
   },
   {
     number: "004",
     title: "Animación y motion graphics",
-    description: "Diseño de logotipo",
-    urlImage: "https://www.gjulieta.com/",
+    description: "Animacion 2D y motion graphics para videos y presentaciones",
+    urlImage: "/public/img/animation.webp",
     items: {
       value: [
-        "item uno",
-        "item dos"
+        "After effects",
+        "Cinema 4D",
+        "Blender",
       ]
     }
   },
   {
     number: "005",
     title: "Grabacion y Edicion de video",
-    description: "Diseño de logotipo",
-    urlImage: "https://www.gjulieta.com/",
+    description: "Grabacion y edicion profesional de video",
+    urlImage: "/public/img/camera.webp",
     items: {
       value: [
-        "item uno",
-        "item dos"
+        "Pre produccion",
+        "Produccion",
+        "Post produccion",
+        "Edicion",
+        "Etalonaje",
       ]
     }
   },
