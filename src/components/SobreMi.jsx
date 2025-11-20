@@ -4,7 +4,7 @@
      return (
         <div className="Sobremi-container">
             <FallingText
-            text={`No solo diseño webs, con mis 7 años de experiencia en creacion de contenido, diseño y desarrollo web creo experiencias digitales que hacen crecer tu negocio, conla mejor calidad, rápido, sin tecnicismos y siempre te acompaño todo el proceso`}
+            text={`No solo diseño webs, con mis 7 años de experiencia en creacion de contenido, diseño y desarrollo web creo experiencias digitales que hacen crecer tu negocio, con la mejor calidad, rápido, sin tecnicismos y siempre te acompaño en todo el proceso`}
             highlightWords={["diseño", "webs", "7", "años", "experiencia", "crecer", "negocio"]}
             highlightClass="highlighted"
             trigger="scroll"

@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="container__footer-text">
-                <span>CREEMOS JUNTOS</span>
+                <span>¿ CREAMOS JUNTOS?</span>
             </div>
             <div className="container__footer-reserved flex flex-center">
                 Todos los derechos reservados realizada por Flexemprende

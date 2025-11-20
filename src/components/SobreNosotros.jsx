@@ -113,13 +113,13 @@ const SobreNosotros = () => {
         <div className="container__content-floating width-50">
           <h5>Tu negocio necesita verse bien para vender.</h5>
           <h3>
-            Una presencia profesional, coherente y estratégica. Sin complicaciones.
+            Una presencia digital, profesional, coherente y estratégica
           </h3>
           <p>
             Por eso creé este pack:
             Un servicio mensual donde me encargo de absolutamente todo, para que tu negocio tenga una presencia digital que atraiga clientes desde el primer mes
           </p>
-          <button className="btn btn-secondary">Agendar una llamada</button>
+          <button className="btn btn-secondary width-100">Agendar una llamada</button>
         </div>
 
         <div className="container__content-Text width-50">

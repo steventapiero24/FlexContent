@@ -230,12 +230,37 @@ const CardOtherServices = () => {
         <div 
           key={index} 
           ref={(el) => (cardsRef.current[index] = el)}
-          className="container__otherServices-card flex"
+          className="container__otherServices-card flex destock-only-container"
         >
           <span>{services.number}</span>
           <h3>{services.title}</h3>
 
           <div className='flex'>
+            <ul className='flex flex-col flex-1'>
+              {services.items.value.map((value, valueIndex) => (
+                <li key={valueIndex}>
+                  <div className='viñeta'></div>
+                  {value}
+                </li>
+              ))}
+            </ul>
+
+            <img src={services.urlImage} alt={services.title} />
+          </div>
+
+          <p>{services.description}</p>
+        </div>
+      ))}
+      {Services.map((services, index) => (
+        <div 
+          key={index} 
+
+          className="container__otherServices-card flex mobile-only-container"
+        >
+          <span>{services.number}</span>
+          <h3>{services.title}</h3>
+
+          <div className='flex container-colum'>
             <ul className='flex flex-col flex-1'>
               {services.items.value.map((value, valueIndex) => (
                 <li key={valueIndex}>

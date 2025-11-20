@@ -51,13 +51,19 @@ const Nav = () => {
                             <a href="">Inicio</a>
                         </li>
                         <li>
-                            <a href="">Proyectos</a>
+                            <a href="#queincluye">Que incluye</a>
                         </li>
                         <li>
-                            <a href="">Tarifas</a>
+                            <a href="">Sobre nosotros</a>
                         </li>
                         <li>
-                            <a href="">Servicios</a>
+                            <a href="">Tarifa</a>
+                        </li>
+                        <li>
+                            <a href="">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="">Otros servicios</a>
                         </li>
                         <li>
                             <a href="">Contacto</a>
