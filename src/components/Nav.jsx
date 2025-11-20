@@ -1,5 +1,7 @@
+// Nav.jsx - Con scroll suave de GSAP
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import Logo from '../../public/img/logo.svg';
 import '../pages/Home.css';
 
@@ -39,6 +41,15 @@ const Nav = () => {
         }, '-=0.5');
     }, []);
 
+    // Función para manejar el scroll suave con GSAP
+    const handleScroll = (e, target) => {
+        e.preventDefault();
+        const smoother = ScrollSmoother.get();
+        if (smoother) {
+            smoother.scrollTo(target, true, "top 100px"); // El "top 100px" deja espacio para el nav
+        }
+    };
+
     return (
         <div className='flex flex-center'>
             <div className='flex flex-center flex-between container_menu'>
@@ -48,35 +59,52 @@ const Nav = () => {
                 <div ref={menuRef} className='menu'>
                     <ul>
                         <li>
-                            <a href="">Inicio</a>
+                            <a href="#hero" onClick={(e) => handleScroll(e, "#hero")}>
+                                Inicio
+                            </a>
                         </li>
                         <li>
-                            <a href="#queincluye">Que incluye</a>
+                            <a href="#proyectos" onClick={(e) => handleScroll(e, "#proyectos")}>
+                                Que incluye
+                            </a>
                         </li>
                         <li>
-                            <a href="">Sobre nosotros</a>
+                            <a href="#sobre-nosotros" onClick={(e) => handleScroll(e, "#sobre-nosotros")}>
+                                Sobre nosotros
+                            </a>
                         </li>
                         <li>
-                            <a href="">Tarifa</a>
+                            <a href="#precios" onClick={(e) => handleScroll(e, "#precios")}>
+                                Tarifa
+                            </a>
                         </li>
                         <li>
-                            <a href="">FAQs</a>
+                            <a href="#comparacion" onClick={(e) => handleScroll(e, "#comparacion")}>
+                                FAQs
+                            </a>
                         </li>
                         <li>
-                            <a href="">Otros servicios</a>
+                            <a href="#otros-servicios" onClick={(e) => handleScroll(e, "#otros-servicios")}>
+                                Otros servicios
+                            </a>
                         </li>
                         <li>
-                            <a href="">Contacto</a>
+                            <a href="#contacto" onClick={(e) => handleScroll(e, "#contacto")}>
+                                Contacto
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div ref={contactRef} className='menu__contact'>
-                    <ul className='flex-nowrap flex flex-center' >
+                    <ul className='flex-nowrap flex flex-center'>
                         <li>
-                            <a className='btn btn-primary' href="">WhatsApp</a>
+                            <a className='btn btn-primary' href="https://wa.me/34614054834?text=Hola,%20me%20gustaría%20obtener%20más%20información"
+        target="_blank"
+        rel="noopener noreferrer"
+                            >WhatsApp</a>
                         </li>
                         <li>
-                            <a className='btn btn-secondary' href="">LLamada</a>
+                            <a className='btn btn-secondary' href="tel:+34614054834">LLamada</a>
                         </li>
                     </ul>
                 </div>

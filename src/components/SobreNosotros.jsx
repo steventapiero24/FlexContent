@@ -119,9 +119,18 @@ const SobreNosotros = () => {
             Por eso creé este pack:
             Un servicio mensual donde me encargo de absolutamente todo, para que tu negocio tenga una presencia digital que atraiga clientes desde el primer mes
           </p>
-          <button className="btn btn-secondary width-100">Agendar una llamada</button>
+          <button
+            className="btn btn-secondary width-100"
+            onClick={() =>
+              window.open(
+                "https://wa.me/34614054834?text=Hola,%20me%20gustaría%20obtener%20más%20información",
+                "_blank"
+              )
+            }
+          >
+            Agendar una llamada
+          </button>
         </div>
-
         <div className="container__content-Text width-50">
           <Carousel
             baseWidth={600}

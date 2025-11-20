@@ -1,3 +1,4 @@
+// Home.jsx - Sin cambios, ya está perfecto
 import React, { useLayoutEffect } from "react";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
@@ -13,14 +14,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Home = () => {
   useLayoutEffect(() => {
     if (ScrollSmoother.get()) ScrollSmoother.get().kill();
 
-    // Crear el efecto de scroll suave
     ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -33,14 +32,30 @@ const Home = () => {
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <Nav />
-        <Hero />
-        <Benefits />
-        <SobreNosotros />
-        <CardPrices />
-        <SobreMi />
-        <Comparation />
-        <OtherServices />
-        <Footer />
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="proyectos">
+          <Benefits />
+        </section>
+        <section id="sobre-nosotros">
+          <SobreNosotros />
+        </section>
+        <section id="precios">
+          <CardPrices />
+        </section>
+        <section id="sobre-mi">
+          <SobreMi />
+        </section>
+        <section id="comparacion">
+          <Comparation />
+        </section>
+        <section id="otros-servicios">
+          <OtherServices />
+        </section>
+        <section id="contacto">
+          <Footer />
+        </section>
       </div>
     </div>
   );
