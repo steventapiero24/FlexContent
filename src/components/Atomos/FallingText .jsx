@@ -12,12 +12,14 @@ const FallingText = ({
     gravity = 1,
     mouseConstraintStiffness = 0.2,
     fontSize = '5rem',
+    enableReset = true, // Nueva prop para habilitar el reset
 }) => {
     const containerRef = useRef(null);
     const textRef = useRef(null);
     const canvasContainerRef = useRef(null);
 
     const [effectStarted, setEffectStarted] = useState(false);
+    const [resetKey, setResetKey] = useState(0); // Para forzar re-render completo
 
     useEffect(() => {
         if (!textRef.current) return;
@@ -29,27 +31,47 @@ const FallingText = ({
             })
             .join(' ');
         textRef.current.innerHTML = newHTML;
-    }, [text, highlightWords, highlightClass]);
+    }, [text, highlightWords, highlightClass, resetKey]);
 
     useEffect(() => {
         if (trigger === 'auto') {
             setEffectStarted(true);
             return;
         }
-        if (trigger === 'scroll' && containerRef.current) {
-           const observer = new IntersectionObserver(
-    ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {  // Se activa cuando está 95% visible
-            setEffectStarted(true);
-            observer.disconnect();
-        }
-    },
-    { threshold: [0, 0.25, 0.5, 0.75, 0.95, 1] }  // Múltiples puntos de observación
-);
+        if (trigger === 'scroll' && containerRef.current && enableReset) {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    // Si el elemento está visible y viene desde arriba
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
+                        if (!effectStarted) {
+                            setEffectStarted(true);
+                        }
+                    } 
+                    // Si sale de la vista por arriba, preparar para reset
+                    else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                        setEffectStarted(false);
+                        setResetKey(prev => prev + 1);
+                    }
+                },
+                { threshold: [0, 0.25, 0.5, 0.75, 0.95, 1] }
+            );
+            observer.observe(containerRef.current);
+            return () => observer.disconnect();
+        } else if (trigger === 'scroll' && containerRef.current) {
+            // Comportamiento original sin reset
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
+                        setEffectStarted(true);
+                        observer.disconnect();
+                    }
+                },
+                { threshold: [0, 0.25, 0.5, 0.75, 0.95, 1] }
+            );
             observer.observe(containerRef.current);
             return () => observer.disconnect();
         }
-    }, [trigger]);
+    }, [trigger, effectStarted, enableReset]);
 
     useEffect(() => {
         if (!effectStarted) return;
@@ -135,13 +157,11 @@ const FallingText = ({
             el.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
             el.removeEventListener("wheel", mouseConstraint.mouse.mousewheel);
 
-            // Ajustes para dispositivos táctiles (si haces interactivo también en móvil)
+            // Ajustes para dispositivos táctiles
             el.removeEventListener("touchmove", mouseConstraint.mouse.mousemove);
             el.removeEventListener("touchstart", mouseConstraint.mouse.mousedown);
             el.removeEventListener("touchend", mouseConstraint.mouse.mouseup);
         }
-
-
 
         World.add(engine.world, [floor, leftWall, rightWall, ceiling, mouseConstraint, ...wordBodies.map(wb => wb.body)]);
 
@@ -171,7 +191,7 @@ const FallingText = ({
             World.clear(engine.world);
             Engine.clear(engine);
         };
-    }, [effectStarted, gravity, wireframes, backgroundColor, mouseConstraintStiffness]);
+    }, [effectStarted, gravity, wireframes, backgroundColor, mouseConstraintStiffness, resetKey]);
 
     const handleTrigger = () => {
         if (!effectStarted && (trigger === 'click' || trigger === 'hover')) {

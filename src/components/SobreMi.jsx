@@ -11,7 +11,7 @@
             backgroundColor="transparent"
             wireframes={false}
             gravity={0.56}
-            fontSize="3.5rem"
+            fontSize="4rem"
             mouseConstraintStiffness={0.9}
             height="100%"
             />

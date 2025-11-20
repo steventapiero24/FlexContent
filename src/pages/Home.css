@@ -587,8 +587,7 @@
   background-color: var(--color-black);
 }
 
-/* Pantallas menores a 430px */
-@media (max-width: 430px) {
+/* @media (max-width: 430px) {
 
   .carousel-container {
     height: auto !important;
@@ -620,7 +619,7 @@
   .carousel-item-description {
     font-size: 13px !important;
   }
-}
+} */
 
 /* Prices */
 
@@ -760,11 +759,14 @@
     margin-top: 40vh
   }
   .Sobremi-container .word {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin: 0;
   }
 
 
+  .Sobremi-container .falling-text-target {
+    line-height: 0.5 !important;
+  }
   .falling-text-target {
     line-height: 0.7 !important;
   }
