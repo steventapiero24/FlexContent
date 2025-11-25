@@ -59,7 +59,7 @@ const Footer = () => {
                         <a href="">+34 61 405 4834</a>
                     </div>
                     <div className="flex footer__contact-redes">
-                        <a href="">instagram</a>
+                        <a href="https://www.instagram.com/flexemprende/" target='_blank'>instagram</a>
                         <a href="">facebook</a>
                         <a href="">Linkeding</a>
                     </div>

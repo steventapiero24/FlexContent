@@ -133,7 +133,17 @@ const SobreNosotros = () => {
         </div>
         <div className="container__content-Text width-50">
           <Carousel
+            className="desktop"
             baseWidth={600}
+            autoplay={true}
+            autoplayDelay={4000}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+            />
+          <Carousel
+            className="mobile"
+            baseWidth={360}
             autoplay={true}
             autoplayDelay={4000}
             pauseOnHover={true}

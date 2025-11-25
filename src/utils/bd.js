@@ -36,7 +36,7 @@ export const images = [
 
 export const imagesBenefits = [
   {
-    url: "/public/img/strategy.webp",
+    url: "/flexemprende/img/strategy.webp",
     title: "Estrategia",
     description: ["Diseño de logotipo",
       "Análisis del negocio",
@@ -47,7 +47,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/public/img/design.webp",
+    url: "/flexemprende/img/design.webp",
     title: "Diseño grafico y web",
     description: ["Diseño de logotipo",
       "Carruseles",
@@ -59,7 +59,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/public/img/camerascine.webp",
+    url: "/flexemprende/img/camerascine.webp",
     title: "Producción de video",
     description: ["4 videos grabados y editados",
       "4 reels adicionales reutilizando contenido",
@@ -70,7 +70,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/public/img/socialmedia.webp",
+    url: "/flexemprende/img/socialmedia.webp",
     title: "Gestión completa de redes",
     description: ["Estrategia y planeacion",
       "Publicación y programación",
@@ -113,7 +113,7 @@ export const Services = [
     number: "001",
     title: "Experiencia de usuario y prototipado",
     description: "Diseño enfocado en la navegacion, accebilidad y usabilidad.",
-    urlImage: "/public/img/uiux.webp",
+    urlImage: "/flexemprende/img/uiux.webp",
     items: {
       value: [
         "Protipado en Figma",
@@ -126,7 +126,7 @@ export const Services = [
     number: "002",
     title: "generacion de contenido con IA",
     description: "Generacion de imagenes y videos con inteligencia artificial",
-    urlImage: "/public/img/ia.webp",
+    urlImage: "/flexemprende/img/ia.webp",
     items: {
       value: [
         "Midjourney",
@@ -139,7 +139,7 @@ export const Services = [
     number: "003",
     title: "Meta, Email, etc, Analytics",
     description: "Pauta publicitaria, generacion de leads, análisis de datos",
-    urlImage: "/public/img/meta-analitycs.webp",
+    urlImage: "/flexemprende/img/meta-analitycs.webp",
     items: {
       value: [
         "Instagram Ads",
@@ -153,7 +153,7 @@ export const Services = [
     number: "004",
     title: "Animación y motion graphics",
     description: "Animacion 2D y motion graphics para videos y presentaciones",
-    urlImage: "/public/img/animation.webp",
+    urlImage: "/flexemprende/img/animation.webp",
     items: {
       value: [
         "After effects",
@@ -166,7 +166,7 @@ export const Services = [
     number: "005",
     title: "Grabacion y Edicion de video",
     description: "Grabacion y edicion profesional de video",
-    urlImage: "/public/img/camera.webp",
+    urlImage: "/flexemprende/img/camera.webp",
     items: {
       value: [
         "Pre produccion",
