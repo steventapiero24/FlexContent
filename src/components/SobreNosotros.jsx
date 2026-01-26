@@ -116,8 +116,7 @@ const SobreNosotros = () => {
             Una presencia digital, profesional, coherente y estratégica
           </h3>
           <p>
-            Por eso creé este pack:
-            Un servicio mensual donde me encargo de absolutamente todo, para que tu negocio tenga una presencia digital que atraiga clientes desde el primer mes
+            Por eso siempre me esfuerzo para que mis creaciones sean coherentes y profesionales. comuniquen los valores de tu marca y atraigan a tu público objetivo.
           </p>
           <button
             className="btn btn-secondary width-100"

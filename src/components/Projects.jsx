@@ -95,29 +95,30 @@ const Benefits = () => {
     <div className="container__benefits" ref={sectionRef} id='queincluye'>
       <div className="container__benefits-content flex">
         <div ref={textRef} className="width-50 fixed container__benefits-content-text flex-col">
-          <h2>¿Qué incluye este pack?</h2>
-          <p>No se trata solo de publicar por publicar.
-            Es contenido que:
-            </p>
+          <h2>Mis ultimos proyectos</h2>
+          <p>Estos son los ultimos proyectos donde he tenido la oportunidad de colaborar</p>
             <ul>
               <li>
-                  ✔ Construye marca
+                  ✔ Diseño grafico y web
               </li>
               <li>
-                  ✔ Aumenta la confianza
+                  ✔ Motion graphics
               </li>
               <li>
-                ✔ Atrae mejores clientes
+                ✔ Edicion de video
               </li>
               <li>
-                ✔ Cuenta una historia
+                ✔ Branding y marcas
               </li>
               <li>
-                ✔ Se ve profesional
+                ✔ Piezas graficas
+              </li>
+              <li>
+                ✔ Contenido impulsado con IA
               </li>
             </ul>
             <p>
-              Lo mejor es que tú no debes hacer nada, trabajamos de la mano pero yo me encargo de todo.
+              Revisa mis ultimos proyectos con detalle utilizando estas herramientas.
             </p>
           <div style={{ height: '200px', position: 'relative', overflow: 'hidden' }}>
             <LogoLoop

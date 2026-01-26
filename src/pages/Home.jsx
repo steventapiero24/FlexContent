@@ -4,9 +4,7 @@ import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import SobreNosotros from "../components/SobreNosotros";
 import Benefits from "../components/Projects";
-import CardPrices from "../components/Atomos/CardPrices";
 import SobreMi from "../components/SobreMi";
-import Comparation from "../components/ForWhat";
 import OtherServices from "../components/OtherServices";
 import Footer from "../components/Footer";
 
@@ -41,14 +39,8 @@ const Home = () => {
         <section id="sobre-nosotros">
           <SobreNosotros />
         </section>
-        <section id="precios">
-          <CardPrices />
-        </section>
         <section id="sobre-mi">
           <SobreMi />
-        </section>
-        <section id="comparacion">
-          <Comparation />
         </section>
         <section id="otros-servicios">
           <OtherServices />

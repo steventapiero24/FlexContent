@@ -162,6 +162,7 @@ const variantMap = {
 export default function ImageTrail({ items = [], variant = 1 }) {
   const containerRef = useRef(null);
   const h1Ref = useRef(null);
+  const h3Ref = useRef(null);
   const pRef = useRef(null);
 
   useEffect(() => {
@@ -223,8 +224,9 @@ export default function ImageTrail({ items = [], variant = 1 }) {
   return (
     <div className="content" ref={containerRef}>
       <div className='container__hero-content width-100'>
-        <h1 ref={h1Ref}>Transformo tu negocio local en una marca digital moderna</h1>
-        <p ref={pRef}>Diseño, video y estrategia para negocios locales que quieren crecer online.</p>
+        <h3 ref={h3Ref}>Diseñador visual - motion designer.</h3>
+        <h1 ref={h1Ref}>Steven Tapiero</h1>
+        <p ref={pRef}>“Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo”.</p>
       </div>
       {items.map((url, i) => (
         <div className="content__img" key={i}>

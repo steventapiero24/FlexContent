@@ -297,7 +297,7 @@
   width: 10px;
   height: 10px;
   transform: translatey(-2px);
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   border-radius: 50%;
   display: inline-block;
   margin-right: 10px;
