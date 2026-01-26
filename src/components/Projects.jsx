@@ -153,6 +153,9 @@ const Benefits = () => {
                       </li>
                   ))}
                 </ul>
+                <a href={image.link} target='_blank'  className="btn btn-primary">
+                   Click para ver los proyectos
+                </a>  
               </div>
             ))}
           </div>

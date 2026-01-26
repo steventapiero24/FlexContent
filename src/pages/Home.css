@@ -276,12 +276,12 @@
 
   h3 {
     position: absolute;
-    transform: translate(40px, -280px);
+    transform: translate(40px, -325px);
     z-index: 200;
   }
 
   ul {
-    transform: translate(40px, -210px);
+    transform: translate(40px, -260px);
     z-index: 200;
     position: absolute;
     font-size: 1.5rem;
@@ -290,6 +290,13 @@
   li {
     display: flex;
     align-items: center;
+  }
+  a {
+    z-index: 200;
+    position: absolute;
+    left: 3%;
+    transform: translate(10%, -100%);
+    top: 95%;
   }
 }
 
