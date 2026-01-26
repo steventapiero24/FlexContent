@@ -4,6 +4,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { imagesBenefits } from '../utils/bd';
 import LogoLoop from './Atomos/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiLinkedin, SiInstagram, SiFacebook, SiTiktok } from 'react-icons/si';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,73 +39,81 @@ const Benefits = () => {
   const textRef = useRef(null);
   const imagesRef = useRef([]);
 
- useEffect(() => {
-  const ctx = gsap.context(() => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
 
-    // Animación de texto
-    gsap.from(textRef.current.querySelectorAll('h2, p'), {
-      y: -80,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.3,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 80%",
-        end: "top 40%",
-        toggleActions: "play none none reverse"
-      }
-    });
-
-    // Animaciones de imágenes
-    imagesRef.current.forEach((img) => {
-      const imageEl = img.querySelector('img');
-      gsap.fromTo(
-        imageEl,
-        {
-          x: -80,
-          opacity: 0,
-          clipPath: 'inset(0 100% 0 0)',
-          webkitClipPath: 'inset(0 100% 0 0)'
-        },
-        {
-          x: 0,
-          opacity: 1,
-          clipPath: 'inset(0 0% 0 0)',
-          webkitClipPath: 'inset(0 0% 0 0)',
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: img,
-            start: "top 90%",
-            end: "80% 60%",
-            scrub: true,
-            markers: false,
-          }
-        }
-      );
-    });
-
-    // Pin solo en pantallas grandes
-    ScrollTrigger.matchMedia({
-      "(min-width: 768px)": function() {
-        ScrollTrigger.create({
+      // Animación de texto
+      gsap.from(textRef.current.querySelectorAll('h2, p'), {
+        y: -80,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power3.out",
+        scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom bottom",
-          pin: textRef.current,
-          pinSpacing: false
-        });
-      },
-      "(max-width: 767px)": function() {
-        // No hacemos nada, el pin queda desactivado en móviles
-      }
-    });
+          start: "top 80%",
+          end: "top 40%",
+          toggleActions: "play none none reverse"
+        }
+      });
 
-  }, sectionRef);
+      // Animaciones de imágenes
+      imagesRef.current.forEach((img) => {
+        const imageEl = img.querySelector('img');
+        gsap.fromTo(
+          imageEl,
+          {
+            x: -80,
+            opacity: 0,
+            clipPath: 'inset(0 100% 0 0)',
+            webkitClipPath: 'inset(0 100% 0 0)'
+          },
+          {
+            x: 0,
+            opacity: 1,
+            clipPath: 'inset(0 0% 0 0)',
+            webkitClipPath: 'inset(0 0% 0 0)',
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: img,
+              start: "top 90%",
+              end: "80% 60%",
+              scrub: true,
+              markers: false,
+            }
+          }
+        );
+      });
 
-  return () => ctx.revert();
-}, []);
+      // Pin solo en pantallas grandes
+      ScrollTrigger.matchMedia({
+        "(min-width: 768px)": function () {
+          ScrollTrigger.create({
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom bottom",
+            pin: textRef.current,
+            pinSpacing: false
+          });
+        },
+        "(max-width: 767px)": function () {
+          // No hacemos nada, el pin queda desactivado en móviles
+        }
+      });
 
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="container__benefits" ref={sectionRef} id='queincluye'>
@@ -97,29 +121,29 @@ const Benefits = () => {
         <div ref={textRef} className="width-50 fixed container__benefits-content-text flex-col">
           <h2>Mis ultimos proyectos</h2>
           <p>Estos son los ultimos proyectos donde he tenido la oportunidad de colaborar</p>
-            <ul>
-              <li>
-                  ✔ Diseño grafico y web
-              </li>
-              <li>
-                  ✔ Motion graphics
-              </li>
-              <li>
-                ✔ Edicion de video
-              </li>
-              <li>
-                ✔ Branding y marcas
-              </li>
-              <li>
-                ✔ Piezas graficas
-              </li>
-              <li>
-                ✔ Contenido impulsado con IA
-              </li>
-            </ul>
-            <p>
-              Revisa mis ultimos proyectos con detalle utilizando estas herramientas.
-            </p>
+          <ul>
+            <li>
+              ✔ Diseño grafico y web
+            </li>
+            <li>
+              ✔ Motion graphics
+            </li>
+            <li>
+              ✔ Edicion de video
+            </li>
+            <li>
+              ✔ Branding y marcas
+            </li>
+            <li>
+              ✔ Piezas graficas
+            </li>
+            <li>
+              ✔ Contenido impulsado con IA
+            </li>
+          </ul>
+          <p>
+            Revisa mis ultimos proyectos con detalle utilizando estas herramientas.
+          </p>
           <div style={{ height: '200px', position: 'relative', overflow: 'hidden' }}>
             <LogoLoop
               logos={techLogos}
@@ -150,12 +174,28 @@ const Benefits = () => {
                     <li key={index}>
                       <div className='viñeta'></div>
                       {item}
-                      </li>
+                    </li>
                   ))}
                 </ul>
-                <a href={image.link} target='_blank'  className="btn btn-primary">
-                   Click para ver los proyectos
-                </a>  
+                <div>
+                  <Button className='btn btn-primary button_modal' onClick={handleOpen}>Click para ver los proyectos</Button>
+
+                  <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                  >
+                    <Box sx={style}>
+                      <Typography id="modal-modal-title" variant="h6" component="h2">
+                        Text in a modal
+                      </Typography>
+                      <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                      </Typography>
+                    </Box>
+                  </Modal>
+                </div>
               </div>
             ))}
           </div>
