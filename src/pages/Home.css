@@ -49,14 +49,18 @@
 }
 
 .container__hero-content {
-  z-index: 200;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0 10rem;
-  height: 60vh;
-  background: transparent;
+    display: flex;
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10rem;
+    height: 60vh;
+    background: transparent;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
   h1,
   p {

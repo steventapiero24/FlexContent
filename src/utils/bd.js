@@ -1,34 +1,34 @@
 export const images = [
   {
-    url: 'https://picsum.photos/id/287/300/300',
+    url: './public/img/motion.webp',
+    alt: 'motion graphics'
+  },
+  {
+    url: './public/img/branding.webp',
+    alt: 'branding'
+  },
+  {
+    url: './public/img/web.webp',
+    alt: 'web design'
+  },
+  {
+    url: './public/img/woman.webp',
     alt: 'Imagen 1'
   },
   {
-    url: 'https://picsum.photos/id/1001/300/300',
+    url: './public/img/ste.webp',
     alt: 'Imagen 1'
   },
   {
-    url: 'httpsum.photos/id/1025/300/300',
+    url: './public/img/product.webp',
     alt: 'Imagen 1'
   },
   {
-    url: 'https://picsum.photos/id/1026/300/300',
+    url: './public/img/idbangular.webp',
     alt: 'Imagen 1'
   },
   {
-    url: 'https://picsum.photos/id/1027/300/300',
-    alt: 'Imagen 1'
-  },
-  {
-    url: 'https://picsum.photos/id/1028/300/300',
-    alt: 'Imagen 1'
-  },
-  {
-    url: 'https://picsum.photos/id/1029/300/300',
-    alt: 'Imagen 1'
-  },
-  {
-    url: 'https://picsum.photos/id/1030/300/300',
+    url: './public/img/futuro-valor.webp',
     alt: 'Imagen 1'
   },
 ];
@@ -232,3 +232,4 @@ export const Accordion = [
     answer: "Perfecto, también puedo ayudarte con eso. Puedo crear tu branding y tu página web en para que tengas una presencia online, si quieres solo esto podemos manejarlo como servicio adicional sin compromiso de adquirir el pack completo.",
   },
 ]
+

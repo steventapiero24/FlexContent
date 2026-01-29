@@ -187,12 +187,17 @@ const Benefits = () => {
                     aria-describedby="modal-modal-description"
                   >
                     <Box sx={style}>
-                      <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Text in a modal
-                      </Typography>
-                      <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                      </Typography>
+                      <div className='modal'>
+                        <div className='modal-content'>
+                          <div className='modal-body'>
+                            <div className='modal__body-columns'>
+                              <div className='modal__body-column'>
+                                <h2></h2>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </Box>
                   </Modal>
                 </div>
