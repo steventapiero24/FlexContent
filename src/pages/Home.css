@@ -1083,3 +1083,14 @@
   width: 100%;
 }
 }
+
+
+/* modales proyectos */
+
+.css-1wnsr1i {
+  width: 900px;
+}
+
+.projects-list {
+  display: flex;
+}

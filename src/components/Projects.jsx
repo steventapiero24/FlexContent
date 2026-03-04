@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import CardPorfolio from './Atomos/CardPorfolio';
 
 const style = {
   position: 'absolute',
@@ -108,11 +109,23 @@ const Benefits = () => {
 
 
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => {
+  const [selectedCategory, setSelectedCategory] = React.useState(null);
+
+  const categoryMap = {
+    "React, Angular, UXUI": "desarollo",
+    "Diseño web": "diseño web",
+    "Diseño grafico": "diseño grafico",
+    "Producción de video": "motiongraphics y video",
+  };
+
+  const handleOpen = (cat) => {
+    const key = categoryMap[cat] || null;
+    setSelectedCategory(key);
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
+    setSelectedCategory(null);
   };
 
   return (
@@ -155,7 +168,7 @@ const Benefits = () => {
                   ))}
                 </ul>
                 <div>
-                  <Button className='btn btn-primary button_modal' onClick={handleOpen}>Click para ver los proyectos</Button>
+                  <Button className='btn btn-primary button_modal' onClick={() => handleOpen(image.title)}>Click para ver los proyectos</Button>
 
                   <Modal
                     open={open}
@@ -169,7 +182,7 @@ const Benefits = () => {
                           <div className='modal-body'>
                             <div className='modal__body-columns'>
                               <div className='modal__body-column'>
-                                <h2></h2>
+                                <CardPorfolio category={selectedCategory} />
                               </div>
                             </div>
                           </div>

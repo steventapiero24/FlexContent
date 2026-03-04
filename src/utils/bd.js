@@ -33,8 +33,103 @@ export const images = [
   },
 ];
 
+// Proyectos organizados por categoría. Cada categoría contiene un array de tres proyectos.
+export const projectsCard = {
+  "desarollo": [
+    {
+      titulo: "Explainer video Quantum",
+      imagen: "/public/img/projects/motion1.jpg",
+      enlace: "https://quantum-video.com",
+      descripcion: "Animación 2D explicativa para producto tecnológico."
+    },
+    {
+      titulo: "Intro animada Pixel",
+      imagen: "/public/img/projects/motion2.jpg",
+      enlace: "https://pixel-intro.com",
+      descripcion: "Secuencia de introducción animada para canal de YouTube."
+    },
+    {
+      titulo: "Efectos visuales Nebula",
+      imagen: "/public/img/projects/motion3.jpg",
+      enlace: "https://nebula-effects.com",
+      descripcion: "Composición de efectos visuales CGI para video corporativo."
+    }
+  ],
+  "diseño web": [
+    {
+      titulo: "clickerbait",
+      imagen: "/public/img/projects/web1.jpg",
+      enlace: "https://clickerbait.com/",
+      descripcion: "Web corporativa responsiva construida con React injectado en wordpress y optimizada para SEO."
+    },
+    {
+      titulo: "Tu solucion medica",
+      imagen: "/public/img/projects/web2.jpg",
+      enlace: "https://tusolucionmedica.com/inicio/",
+      descripcion: "E-commerce con formularios, pasarela de pago y diseño centrado en la experiencia de usuario."
+    },
+    {
+      titulo: "Restaurante Gericht",
+      imagen: "/public/img/projects/web3.jpg",
+      enlace: "https://glittering-restaurant-stevent.netlify.app/",
+      descripcion: "Portafolio interactivo con animaciones y soporte para contenido multimedia."
+    }
+  ],
+  "diseño grafico": [
+    {
+      titulo: "Identidad visual Verde",
+      imagen: "/public/img/projects/graphic1.jpg",
+      enlace: "https://verde-brand.com",
+      descripcion: "Diseño de logo e identidad para marca ecológica, con manual de uso."
+    },
+    {
+      titulo: "Campaña publicitaria Sol",
+      imagen: "/public/img/projects/graphic2.jpg",
+      enlace: "https://sol-campaign.com",
+      descripcion: "Piezas gráficas para redes sociales y print enfocadas en conversión."
+    },
+    {
+      titulo: "Paquete editorial Oasis",
+      imagen: "/public/img/projects/graphic3.jpg",
+      enlace: "https://oasis-magazine.com",
+      descripcion: "Diseño de revista digital con tipografía personalizada y maquetación."
+    }
+  ],
+  "motiongraphics y video": [
+    {
+      titulo: "Documental Río",
+      imagen: "/public/img/projects/video1.jpg",
+      enlace: "https://rio-documental.com",
+      descripcion: "Grabación y edición de documental ambiental."
+    },
+    {
+      titulo: "Sesión de producto Lunar",
+      imagen: "/public/img/projects/video2.jpg",
+      enlace: "https://lunar-products.com",
+      descripcion: "Fotografía y video de productos con iluminación profesional."
+    },
+    {
+      titulo: "Spot publicitario Eclipse",
+      imagen: "/public/img/projects/video3.jpg",
+      enlace: "https://eclipse-ad.com",
+      descripcion: "Producción completa de spot para campaña televisiva."
+    }
+  ]
+};
+
 
 export const imagesBenefits = [
+  {
+    url: "/flexemprende/img/socialmedia.webp",
+    title: "React, Angular, UXUI",
+    description: ["Animación 2D y 3D",
+      "Motion graphics y videos explicativos",
+      "produccion de Efectos hiperrealistas",
+      "OIntegracion de animaciones en videos",
+      "animaciones para web y apps",
+    ],
+    link: "https://www.gjulieta.com/"
+  },
   {
     url: "/flexemprende/img/design.webp",
     title: "Diseño web",
@@ -54,17 +149,6 @@ export const imagesBenefits = [
       "Desarrollo de sistemas visuales y guías de estilo",
       "Enfoque en claridad visual y comunicación efectiva",
       "Ilustración",
-    ],
-    link: "https://www.gjulieta.com/"
-  },
-  {
-    url: "/flexemprende/img/socialmedia.webp",
-    title: "Motion graphics",
-    description: ["Animación 2D y 3D",
-      "Motion graphics y videos explicativos",
-      "produccion de Efectos hiperrealistas",
-      "OIntegracion de animaciones en videos",
-      "animaciones para web y apps",
     ],
     link: "https://www.gjulieta.com/"
   },
