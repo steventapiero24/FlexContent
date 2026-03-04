@@ -112,7 +112,7 @@ const Benefits = () => {
   const [selectedCategory, setSelectedCategory] = React.useState(null);
 
   const categoryMap = {
-    "React, Angular, UXUI": "desarollo",
+    "React, Angular, UXUI": "Desarrollo",
     "Diseño web": "diseño web",
     "Diseño grafico": "diseño grafico",
     "Producción de video": "motiongraphics y video",

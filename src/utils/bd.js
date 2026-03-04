@@ -35,22 +35,22 @@ export const images = [
 
 // Proyectos organizados por categoría. Cada categoría contiene un array de tres proyectos.
 export const projectsCard = {
-  "desarollo": [
+  "Desarrollo": [
     {
-      titulo: "Explainer video Quantum",
-      imagen: "/public/img/projects/motion1.jpg",
+      titulo: "Banco interamericano de desarrollo",
+      imagen: "./public/img/reactcartera.webp",
       enlace: "https://quantum-video.com",
-      descripcion: "Animación 2D explicativa para producto tecnológico."
+      descripcion: "Maquetacion y desarrollo front end de plataforma de video bajo demanda para clientes corporativos."
     },
     {
-      titulo: "Intro animada Pixel",
-      imagen: "/public/img/projects/motion2.jpg",
+      titulo: "Instituto de ciberseguridad de España",
+      imagen: "./public/img/idsob.webp",
       enlace: "https://pixel-intro.com",
       descripcion: "Secuencia de introducción animada para canal de YouTube."
     },
     {
-      titulo: "Efectos visuales Nebula",
-      imagen: "/public/img/projects/motion3.jpg",
+      titulo: "Banco interamericano de desarrollo",
+      imagen: "./public/img/idbangular.webp",
       enlace: "https://nebula-effects.com",
       descripcion: "Composición de efectos visuales CGI para video corporativo."
     }
@@ -58,19 +58,19 @@ export const projectsCard = {
   "diseño web": [
     {
       titulo: "clickerbait",
-      imagen: "/public/img/projects/web1.jpg",
+      imagen: "./public/img/clickerbait.webp",
       enlace: "https://clickerbait.com/",
       descripcion: "Web corporativa responsiva construida con React injectado en wordpress y optimizada para SEO."
     },
     {
       titulo: "Tu solucion medica",
-      imagen: "/public/img/projects/web2.jpg",
+      imagen: "./public/img/seguros.webp",
       enlace: "https://tusolucionmedica.com/inicio/",
       descripcion: "E-commerce con formularios, pasarela de pago y diseño centrado en la experiencia de usuario."
     },
     {
       titulo: "Restaurante Gericht",
-      imagen: "/public/img/projects/web3.jpg",
+      imagen: "./public/img/git.webp",
       enlace: "https://glittering-restaurant-stevent.netlify.app/",
       descripcion: "Portafolio interactivo con animaciones y soporte para contenido multimedia."
     }
@@ -122,11 +122,12 @@ export const imagesBenefits = [
   {
     url: "/flexemprende/img/socialmedia.webp",
     title: "React, Angular, UXUI",
-    description: ["Animación 2D y 3D",
-      "Motion graphics y videos explicativos",
-      "produccion de Efectos hiperrealistas",
-      "OIntegracion de animaciones en videos",
-      "animaciones para web y apps",
+    description: [
+      "Front end con React y Angular",
+      "Maquetacion con bibliotecas de componentes",
+      "Consumo de APIs y servicios web",
+      "Creacion de prototipos interactivos en Figma",
+      "Creacion de sistemas de diseño",
     ],
     link: "https://www.gjulieta.com/"
   },
@@ -165,31 +166,6 @@ export const imagesBenefits = [
   },
 ]
 
-export const tarifas = [
-  {
-    title: "Pack - Todo en uno",
-    descriptions: "Ideal para negocios que quieren tener visibilidad online.",
-    includes: {
-      list: [
-        "Logotipo profesional y paleta de colores (Si aun no la tienes)",
-        "Tipografías y estilo visual de marca",
-        "Mini manual de identidad (PDF)",
-        "Diseño web moderno y adaptable a móviles",
-        "Estrategia para redes sociales, webs, marca y lanzamientos",
-        "Fotografias de tu negocio y productos",
-        "Preproduccion, Produccion y postproduccion de video",
-        "Edición de video con motion graphics (Animaciones)",
-        "Tu negocio en Google Maps",
-        "produccion completa de contenidos para redes sociales, web, impresiones,etc",
-        "Acompñamiento y asesoría durante todo el proceso",
-      ]
-    },
-
-    result: "Tu negocio tendrá una imagen moderna, coherente y profesional, lista para mostrar y compartir.",
-    price: 650,
-    Entrega: "Mes a mes"
-  }
-]
 
 export const Services = [
   {

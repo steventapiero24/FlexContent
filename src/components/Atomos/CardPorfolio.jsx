@@ -16,7 +16,7 @@ const CardPorfolio = ({ category }) => {
         <div className="projects-list">
           {projects.map((proj, idx) => (
             <div key={idx} className="project-card">
-              <a href={proj.enlace} target="_blank" rel="noopener noreferrer">
+              <a href={proj.enlace} target="_blank" rel="noopener noreferrer" className="project-link">
                 <img
                   src={proj.imagen}
                   alt={proj.titulo}
@@ -25,6 +25,14 @@ const CardPorfolio = ({ category }) => {
               </a>
               <h3 className="project-title">{proj.titulo}</h3>
               <p className="project-description">{proj.descripcion}</p>
+              <a
+                href={proj.enlace}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-button"
+              >
+                Ver proyecto
+              </a>
             </div>
           ))}
         </div>
