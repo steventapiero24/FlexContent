@@ -120,30 +120,7 @@ const Benefits = () => {
       <div className="container__benefits-content flex">
         <div ref={textRef} className="width-50 fixed container__benefits-content-text flex-col">
           <h2>Mis ultimos proyectos</h2>
-          <p>Estos son los ultimos proyectos donde he tenido la oportunidad de colaborar</p>
-          <ul>
-            <li>
-              ✔ Diseño grafico y web
-            </li>
-            <li>
-              ✔ Motion graphics
-            </li>
-            <li>
-              ✔ Edicion de video
-            </li>
-            <li>
-              ✔ Branding y marcas
-            </li>
-            <li>
-              ✔ Piezas graficas
-            </li>
-            <li>
-              ✔ Contenido impulsado con IA
-            </li>
-          </ul>
-          <p>
-            Revisa mis ultimos proyectos con detalle utilizando estas herramientas.
-          </p>
+          <p>Estos son los ultimos proyectos donde he tenido la oportunidad de colaborar, utilizo multiples herramientas de diseño, codigo e inteligencia artificial asi mejorar mis habilidades y optimizar mi proceso de trabajo.</p>
           <div style={{ height: '200px', position: 'relative', overflow: 'hidden' }}>
             <LogoLoop
               logos={techLogos}
@@ -156,7 +133,7 @@ const Benefits = () => {
               fadeOut
               fadeOutColor="rgba(17, 17, 18, 0.952)"
               ariaLabel="Technology partners"
-            />
+              />
           </div>
         </div>
         <div className="width-50 wrapper container__benefits-content-images">

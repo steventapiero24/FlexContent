@@ -36,17 +36,6 @@ export const images = [
 
 export const imagesBenefits = [
   {
-    url: "/flexemprende/img/strategy.webp",
-    title: "Diseño grafico",
-    description: ["Creación de identidades visuales",
-      "Diseño de piezas gráficas",
-      "Desarrollo de sistemas visuales y guías de estilo",
-      "Enfoque en claridad visual y comunicación efectiva",
-      "Ilustración",
-    ],
-    link: "https://www.gjulieta.com/"
-  },
-  {
     url: "/flexemprende/img/design.webp",
     title: "Diseño web",
     description: ["Diseño de interfaces (UX/UI)",
@@ -58,13 +47,13 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/flexemprende/img/camerascine.webp",
-    title: "Producción de video",
-    description: ["Pre producción",
-      "Producción",
-      "Post producción",
-      "Edición",
-      "Etalonaje"
+    url: "/flexemprende/img/strategy.webp",
+    title: "Diseño grafico",
+    description: ["Creación de identidades visuales",
+      "Diseño de piezas gráficas",
+      "Desarrollo de sistemas visuales y guías de estilo",
+      "Enfoque en claridad visual y comunicación efectiva",
+      "Ilustración",
     ],
     link: "https://www.gjulieta.com/"
   },
@@ -76,6 +65,17 @@ export const imagesBenefits = [
       "produccion de Efectos hiperrealistas",
       "OIntegracion de animaciones en videos",
       "animaciones para web y apps",
+    ],
+    link: "https://www.gjulieta.com/"
+  },
+  {
+    url: "/flexemprende/img/camerascine.webp",
+    title: "Producción de video",
+    description: ["Pre producción",
+      "Producción",
+      "Post producción",
+      "Edición",
+      "Etalonaje"
     ],
     link: "https://www.gjulieta.com/"
   },
