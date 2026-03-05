@@ -191,8 +191,8 @@ li {
 
 @media (max-width: 768px) { 
   .btn {
-  padding: .5rem 1.25rem;
-  font-size: 1rem;
+  padding: .5rem 1.25rem !important;
+  font-size: 1rem !important;
 }
 }
 

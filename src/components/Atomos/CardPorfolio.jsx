@@ -16,6 +16,7 @@ const CardPorfolio = ({ category }) => {
         <div className="projects-list">
           {projects.map((proj, idx) => (
             <div key={idx} className="project-card">
+              {/* always show image; only hide button when category is Desarrollo */}
               <a href={proj.enlace} target="_blank" rel="noopener noreferrer" className="project-link">
                 <img
                   src={proj.imagen}
@@ -25,14 +26,16 @@ const CardPorfolio = ({ category }) => {
               </a>
               <h3 className="project-title">{proj.titulo}</h3>
               <p className="project-description">{proj.descripcion}</p>
-              <a
-                href={proj.enlace}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-button"
-              >
-                Ver proyecto
-              </a>
+              {category !== "Desarrollo" && (
+                <a
+                  href={proj.enlace}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-button"
+                >
+                  Ver proyecto
+                </a>
+              )}
             </div>
           ))}
         </div>

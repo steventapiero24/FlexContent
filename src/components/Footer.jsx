@@ -55,13 +55,13 @@ const Footer = () => {
 
                 <div className="flex flex-col flex-1">
                     <div className="flex flex-col footer__contact-text">
-                        <a href="">flexemprende@gmail.com</a>
+                        <a href="">steventapiero24@gmail.com</a>
                         <a href="">+34 61 405 4834</a>
                     </div>
                     <div className="flex footer__contact-redes">
-                        <a href="https://www.instagram.com/flexemprende/" target='_blank'>instagram</a>
-                        <a href="">facebook</a>
-                        <a href="">Linkeding</a>
+                        <a href="https://www.instagram.com/__steventapiero/" target='_blank'>instagram</a>
+                        <a href="https://www.tiktok.com/@_steventapiero"  target='_blank'>TikTok</a>
+                        <a href="https://www.linkedin.com/in/steven-tapiero/" target='_blank'>Linkeding</a>
                     </div>
 
                 </div>
@@ -70,7 +70,7 @@ const Footer = () => {
                 <span>¿ CREAMOS JUNTOS?</span>
             </div>
             <div className="container__footer-reserved flex flex-center">
-                Todos los derechos reservados realizada por Flexemprende
+                Todos los derechos reservados realizada por Steven Tapiero
             </div>
         </div>
     )
