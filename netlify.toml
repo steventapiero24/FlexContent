@@ -1,0 +1,4 @@
+[build]
+base = "FlexContent"
+command = "npm run build"
+publish = "FlexContent/dist"
