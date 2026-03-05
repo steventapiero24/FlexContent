@@ -1,4 +1,4 @@
-[build]
-base = "FlexContent"
-command = "npm run build"
-publish = "FlexContent/dist"
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200

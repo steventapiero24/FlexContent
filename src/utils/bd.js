@@ -1,34 +1,34 @@
 export const images = [
   {
-    url: './public/img/motion.webp',
+      url: '/img/motion.webp',
     alt: 'motion graphics'
   },
   {
-    url: './public/img/branding.webp',
+    url: '/img/branding.webp',
     alt: 'branding'
   },
   {
-    url: './public/img/web.webp',
+    url: '/img/web.webp',
     alt: 'web design'
   },
   {
-    url: './public/img/woman.webp',
+    url: '/img/woman.webp',
     alt: 'Imagen 1'
   },
   {
-    url: './public/img/ste.webp',
+    url: '/img/ste.webp',
     alt: 'Imagen 1'
   },
   {
-    url: './public/img/product.webp',
+    url: '/img/product.webp',
     alt: 'Imagen 1'
   },
   {
-    url: './public/img/idbangular.webp',
+    url: '/img/idbangular.webp',
     alt: 'Imagen 1'
   },
   {
-    url: './public/img/futuro-valor.webp',
+    url: '/img/futuro-valor.webp',
     alt: 'Imagen 1'
   },
 ];
@@ -38,36 +38,36 @@ export const projectsCard = {
   "Desarrollo": [
     {
       titulo: "Banco interamericano de desarrollo",
-      imagen: "./public/img/reactcartera.webp",
+      imagen: "/img/reactcartera.webp",
       descripcion: "Maquetacion y desarrollo front end de plataforma de video bajo demanda para clientes corporativos."
     },
     {
       titulo: "Instituto de ciberseguridad de España",
-      imagen: "./public/img/idsob.webp",
+      imagen: "/img/idsob.webp",
       descripcion: "Secuencia de introducción animada para canal de YouTube."
     },
     {
       titulo: "Banco interamericano de desarrollo",
-      imagen: "./public/img/idbangular.webp",
+      imagen: "/img/idbangular.webp",
       descripcion: "Composición de efectos visuales CGI para video corporativo."
     }
   ],
   "diseño web": [
     {
       titulo: "clickerbait",
-      imagen: "./public/img/clickerbait.webp",
+      imagen: "/img/idsob.webp",
       enlace: "https://clickerbait.com/",
       descripcion: "Web corporativa responsiva construida con React injectado en wordpress y optimizada para SEO."
     },
     {
       titulo: "Tu solucion medica",
-      imagen: "./public/img/seguros.webp",
+      imagen: "/img/seguros.webp",
       enlace: "https://tusolucionmedica.com/inicio/",
       descripcion: "E-commerce con formularios, pasarela de pago y diseño centrado en la experiencia de usuario."
     },
     {
       titulo: "Restaurante Gericht",
-      imagen: "./public/img/git.webp",
+      imagen: "/img/git.webp",
       enlace: "https://glittering-restaurant-stevent.netlify.app/",
       descripcion: "Portafolio interactivo con animaciones y soporte para contenido multimedia."
     }
@@ -75,19 +75,19 @@ export const projectsCard = {
   "diseño grafico": [
     {
       titulo: "Identidad visual Giarcampus",
-      imagen: "./public/img/giarcampus.webp",
+      imagen: "/img/giarcampus.webp",
       enlace: "https://www.behance.net/gallery/177665549/Brand-Giarcampus",
       descripcion: "Diseño de logo e identidad para marca educativa giarcampus, con manual de marca."
     },
     {
       titulo: "Animacion en 2D y 3D Magical dinner",
-      imagen: "./public/img/personaje.webp",
+      imagen: "/img/personaje.webp",
       enlace: "https://www.behance.net/gallery/148239067/Magical-dinner",
       descripcion: "Desde el proceso de diseño de personajes hasta la animacion final, para video promocional de restaurante."
     },
     {
       titulo: "Identidad visual Kuates",
-      imagen: "./public/img/kuates.webp",
+      imagen: "/img/kuates.webp",
       enlace: "https://www.behance.net/gallery/187542849/Kuates-brand",
       descripcion: "Diseño de revista digital con tipografía personalizada y maquetación."
     }
@@ -95,19 +95,19 @@ export const projectsCard = {
   "motiongraphics y video": [
     {
       titulo: "Documental Río",
-      imagen: "/public/img/projects/video1.jpg",
+      imagen: "/img/projects/video1.jpg",
       enlace: "https://rio-documental.com",
       descripcion: "Grabación y edición de documental ambiental."
     },
     {
       titulo: "Sesión de producto Lunar",
-      imagen: "/public/img/projects/video2.jpg",
+      imagen: "/img/projects/video2.jpg",
       enlace: "https://lunar-products.com",
       descripcion: "Fotografía y video de productos con iluminación profesional."
     },
     {
       titulo: "Spot publicitario Eclipse",
-      imagen: "/public/img/projects/video3.jpg",
+      imagen: "/img/projects/video3.jpg",
       enlace: "https://eclipse-ad.com",
       descripcion: "Producción completa de spot para campaña televisiva."
     }
@@ -117,7 +117,7 @@ export const projectsCard = {
 
 export const imagesBenefits = [
   {
-    url: "/flexemprende/img/socialmedia.webp",
+    url: "/img/socialmedia.webp",
     title: "React, Angular, UXUI",
     description: [
       "Front end con React y Angular",
@@ -129,7 +129,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/flexemprende/img/design.webp",
+    url: "/img/design.webp",
     title: "Diseño web",
     description: ["Diseño de interfaces (UX/UI)",
       "Prototipado y diseño responsive",
@@ -140,7 +140,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/flexemprende/img/strategy.webp",
+    url: "/img/strategy.webp",
     title: "Diseño grafico",
     description: ["Creación de identidades visuales",
       "Diseño de piezas gráficas",
@@ -151,7 +151,7 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/flexemprende/img/camerascine.webp",
+    url: "/img/camerascine.webp",
     title: "Producción de video",
     description: ["Pre producción",
       "Producción",
@@ -169,7 +169,7 @@ export const Services = [
     number: "001",
     title: "Experiencia de usuario y prototipado",
     description: "Diseño enfocado en la navegacion, accebilidad y usabilidad.",
-    urlImage: "/flexemprende/img/uiux.webp",
+    urlImage: "/img/uiux.webp",
     items: {
       value: [
         "Protipado en Figma",
@@ -182,7 +182,7 @@ export const Services = [
     number: "002",
     title: "generacion de contenido con IA",
     description: "Generacion de imagenes y videos con inteligencia artificial",
-    urlImage: "/flexemprende/img/ia.webp",
+    urlImage: "/img/ia.webp",
     items: {
       value: [
         "Midjourney",
@@ -195,7 +195,7 @@ export const Services = [
     number: "003",
     title: "Meta, Email, etc, Analytics",
     description: "Pauta publicitaria, generacion de leads, análisis de datos",
-    urlImage: "/flexemprende/img/meta-analitycs.webp",
+    urlImage: "/img/meta-analitycs.webp",
     items: {
       value: [
         "Instagram Ads",
@@ -209,7 +209,7 @@ export const Services = [
     number: "004",
     title: "Animación y motion graphics",
     description: "Animacion 2D y motion graphics para videos y presentaciones",
-    urlImage: "/flexemprende/img/animation.webp",
+    urlImage: "/img/animation.webp",
     items: {
       value: [
         "After effects",
@@ -222,7 +222,7 @@ export const Services = [
     number: "005",
     title: "Grabacion y Edicion de video",
     description: "Grabacion y edicion profesional de video",
-    urlImage: "/flexemprende/img/camera.webp",
+    urlImage: "/img/camera.webp",
     items: {
       value: [
         "Pre produccion",
