@@ -39,19 +39,16 @@ export const projectsCard = {
     {
       titulo: "Banco interamericano de desarrollo",
       imagen: "./public/img/reactcartera.webp",
-      enlace: "https://quantum-video.com",
       descripcion: "Maquetacion y desarrollo front end de plataforma de video bajo demanda para clientes corporativos."
     },
     {
       titulo: "Instituto de ciberseguridad de España",
       imagen: "./public/img/idsob.webp",
-      enlace: "https://pixel-intro.com",
       descripcion: "Secuencia de introducción animada para canal de YouTube."
     },
     {
       titulo: "Banco interamericano de desarrollo",
       imagen: "./public/img/idbangular.webp",
-      enlace: "https://nebula-effects.com",
       descripcion: "Composición de efectos visuales CGI para video corporativo."
     }
   ],
@@ -77,21 +74,21 @@ export const projectsCard = {
   ],
   "diseño grafico": [
     {
-      titulo: "Identidad visual Verde",
-      imagen: "/public/img/projects/graphic1.jpg",
-      enlace: "https://verde-brand.com",
-      descripcion: "Diseño de logo e identidad para marca ecológica, con manual de uso."
+      titulo: "Identidad visual Giarcampus",
+      imagen: "./public/img/giarcampus.webp",
+      enlace: "https://www.behance.net/gallery/177665549/Brand-Giarcampus",
+      descripcion: "Diseño de logo e identidad para marca educativa giarcampus, con manual de marca."
     },
     {
-      titulo: "Campaña publicitaria Sol",
-      imagen: "/public/img/projects/graphic2.jpg",
-      enlace: "https://sol-campaign.com",
-      descripcion: "Piezas gráficas para redes sociales y print enfocadas en conversión."
+      titulo: "Animacion en 2D y 3D Magical dinner",
+      imagen: "./public/img/personaje.webp",
+      enlace: "https://www.behance.net/gallery/148239067/Magical-dinner",
+      descripcion: "Desde el proceso de diseño de personajes hasta la animacion final, para video promocional de restaurante."
     },
     {
-      titulo: "Paquete editorial Oasis",
-      imagen: "/public/img/projects/graphic3.jpg",
-      enlace: "https://oasis-magazine.com",
+      titulo: "Identidad visual Kuates",
+      imagen: "./public/img/kuates.webp",
+      enlace: "https://www.behance.net/gallery/187542849/Kuates-brand",
       descripcion: "Diseño de revista digital con tipografía personalizada y maquetación."
     }
   ],

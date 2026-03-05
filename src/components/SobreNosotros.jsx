@@ -111,12 +111,12 @@ const SobreNosotros = () => {
 
       <div className="container__Sobrenosotroscontent">
         <div className="container__content-floating width-50">
-          <h5>Tu negocio necesita verse bien para vender.</h5>
+          <h5>Que tu trabajo visual hable por sí solo.</h5>
           <h3>
-            Una presencia digital, profesional, coherente y estratégica
+            Donde el diseño visual y el código se encuentran
           </h3>
           <p>
-            Por eso siempre me esfuerzo para que mis creaciones sean coherentes y profesionales. comuniquen los valores de tu marca y atraigan a tu público objetivo.
+            Por eso siempre me esfuerzo para que cada uno de mis proyectos sean coherentes y profesionales. Diseño interfaces intuitivas y las materializo con código limpio y escalable. Mi enfoque es simple: crear productos digitales que se sientan tan bien como se ven.
           </p>
           <button
             className="btn btn-secondary width-100"
