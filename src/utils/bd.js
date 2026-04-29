@@ -40,16 +40,6 @@ export const projectsCard = {
       titulo: "Banco interamericano de desarrollo",
       imagen: "/img/reactcartera.webp",
       descripcion: "Maquetacion y desarrollo front end de plataforma de video bajo demanda para clientes corporativos."
-    },
-    {
-      titulo: "Instituto de ciberseguridad de España",
-      imagen: "/img/idsob.webp",
-      descripcion: "Secuencia de introducción animada para canal de YouTube."
-    },
-    {
-      titulo: "Banco interamericano de desarrollo",
-      imagen: "/img/idbangular.webp",
-      descripcion: "Composición de efectos visuales CGI para video corporativo."
     }
   ],
   "diseño web": [
@@ -58,18 +48,6 @@ export const projectsCard = {
       imagen: "/img/idsob.webp",
       enlace: "https://clickerbait.com/",
       descripcion: "Web corporativa responsiva construida con React injectado en wordpress y optimizada para SEO."
-    },
-    {
-      titulo: "Tu solucion medica",
-      imagen: "/img/seguros.webp",
-      enlace: "https://tusolucionmedica.com/inicio/",
-      descripcion: "E-commerce con formularios, pasarela de pago y diseño centrado en la experiencia de usuario."
-    },
-    {
-      titulo: "Restaurante Gericht",
-      imagen: "/img/git.webp",
-      enlace: "https://glittering-restaurant-stevent.netlify.app/",
-      descripcion: "Portafolio interactivo con animaciones y soporte para contenido multimedia."
     }
   ],
   "diseño grafico": [
@@ -78,18 +56,6 @@ export const projectsCard = {
       imagen: "/img/giarcampus.webp",
       enlace: "https://www.behance.net/gallery/177665549/Brand-Giarcampus",
       descripcion: "Diseño de logo e identidad para marca educativa giarcampus, con manual de marca."
-    },
-    {
-      titulo: "Animacion en 2D y 3D Magical dinner",
-      imagen: "/img/personaje.webp",
-      enlace: "https://www.behance.net/gallery/148239067/Magical-dinner",
-      descripcion: "Desde el proceso de diseño de personajes hasta la animacion final, para video promocional de restaurante."
-    },
-    {
-      titulo: "Identidad visual Kuates",
-      imagen: "/img/kuates.webp",
-      enlace: "https://www.behance.net/gallery/187542849/Kuates-brand",
-      descripcion: "Diseño de revista digital con tipografía personalizada y maquetación."
     }
   ],
   "motiongraphics y video": [
@@ -98,18 +64,6 @@ export const projectsCard = {
       imagen: "/img/projects/video1.jpg",
       enlace: "https://rio-documental.com",
       descripcion: "Grabación y edición de documental ambiental."
-    },
-    {
-      titulo: "Sesión de producto Lunar",
-      imagen: "/img/projects/video2.jpg",
-      enlace: "https://lunar-products.com",
-      descripcion: "Fotografía y video de productos con iluminación profesional."
-    },
-    {
-      titulo: "Spot publicitario Eclipse",
-      imagen: "/img/projects/video3.jpg",
-      enlace: "https://eclipse-ad.com",
-      descripcion: "Producción completa de spot para campaña televisiva."
     }
   ]
 };
@@ -117,8 +71,8 @@ export const projectsCard = {
 
 export const imagesBenefits = [
   {
-    url: "/img/socialmedia.webp",
-    title: "React, Angular, UXUI",
+    url: "/img/anelaapp.webp",
+    title: "Anela app",
     description: [
       "Front end con React y Angular",
       "Maquetacion con bibliotecas de componentes",
@@ -129,8 +83,8 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/img/design.webp",
-    title: "Diseño web",
+    url: "/img/colaborativos.webp",
+    title: "Incibe, IDB, Colaborativos",
     description: ["Diseño de interfaces (UX/UI)",
       "Prototipado y diseño responsive",
       "Codigo nativo o Wordpress",
@@ -140,8 +94,8 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/img/strategy.webp",
-    title: "Diseño grafico",
+    url: "/img/waabi.webp",
+    title: "Wabbi",
     description: ["Creación de identidades visuales",
       "Diseño de piezas gráficas",
       "Desarrollo de sistemas visuales y guías de estilo",
@@ -151,8 +105,8 @@ export const imagesBenefits = [
     link: "https://www.gjulieta.com/"
   },
   {
-    url: "/img/camerascine.webp",
-    title: "Producción de video",
+    url: "/img/futuro.webp",
+    title: "Futuro valor",
     description: ["Pre producción",
       "Producción",
       "Post producción",

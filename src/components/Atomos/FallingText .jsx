@@ -11,7 +11,6 @@ const FallingText = ({
     wireframes = false,
     gravity = 1,
     mouseConstraintStiffness = 0.2,
-    fontSize = '5rem',
     enableReset = true, // Nueva prop para habilitar el reset
 }) => {
     const containerRef = useRef(null);
@@ -213,10 +212,6 @@ const FallingText = ({
             <div
                 ref={textRef}
                 className="falling-text-target"
-                style={{
-                    fontSize: fontSize,
-                    lineHeight: 1.4
-                }}
             />
             <div ref={canvasContainerRef} className="falling-text-canvas" />
         </div>

@@ -1,104 +1,141 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { imagesBenefits } from '../utils/bd';
 import LogoLoop from './Atomos/LogoLoop';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiLinkedin, SiInstagram, SiFacebook, SiTiktok } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiLinkedin, SiInstagram, SiFacebook, SiTiktok, SiFigma } from 'react-icons/si';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import CardPorfolio from './Atomos/CardPorfolio';
 
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
+  position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+  width: 400, bgcolor: 'background.paper', border: '2px solid #000', boxShadow: 24, p: 4,
 };
 
 gsap.registerPlugin(ScrollTrigger);
 
 const techLogos = [
+  { node: <SiFigma />, title: "Figma", href: "https://figma.com" },
   { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiLinkedin />, title: "React", href: "https://Linkedin.com" },
-  { node: <SiInstagram />, title: "React", href: "https://Instagram.com" },
-  { node: <SiFacebook />, title: "React", href: "https://SiFacebook.com" },
-  { node: <SiTiktok />, title: "React", href: "https://SiTiktok.com" },
   { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
   { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" }
 ];
 
 const Benefits = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
+  const titleRef = useRef(null);
+  const followerRef = useRef(null);
   const imagesRef = useRef([]);
+  const imageFollowersRef = useRef([]);
+
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const follower = followerRef.current;
+      const title = titleRef.current;
 
-      // Animación de texto
+      // Centramos el punto de anclaje
+      gsap.set(follower, { xPercent: -50, yPercent: -50 });
+
+      // Centramos cada follower de imagen
+      imageFollowersRef.current.forEach(follower => {
+        if (follower) gsap.set(follower, { xPercent: -50, yPercent: -50 });
+      });
+
+      const handleMove = (e) => {
+        const rect = textRef.current.getBoundingClientRect();
+        
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        gsap.to(follower, {
+          x: x,
+          y: y,
+          duration: 0.1, 
+          ease: "none"
+        });
+      };
+
+      const handleEnter = () => {
+        gsap.to(follower, { autoAlpha: 1, duration: 0.2 });
+      };
+
+      const handleLeave = () => {
+        gsap.to(follower, { autoAlpha: 0, duration: 0.2 });
+      };
+
+      if (title) {
+        title.addEventListener("mousemove", handleMove);
+        title.addEventListener("mouseenter", handleEnter);
+        title.addEventListener("mouseleave", handleLeave);
+      }
+
+      // Cursor follower para imágenes de proyectos - cada imagen tiene su propio follower
+      imagesRef.current.forEach((imageContainer, index) => {
+        if (!imageContainer) return;
+        
+        const img = imageContainer.querySelector('img');
+        const imageFollower = imageFollowersRef.current[index];
+        if (!img || !imageFollower) return;
+
+        const imageTitle = imagesBenefits[index]?.title || '';
+
+        const handleImageMove = (e) => {
+          const rect = imageContainer.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top + 50; // Offset para que aparezca más abajo
+
+          gsap.to(imageFollower, {
+            x: x,
+            y: y,
+            duration: 0.5, // Delay pequeño en el seguimiento
+            ease: "power2.out"
+          });
+        };
+
+        const handleImageEnter = (e) => {
+          if (imageFollower) {
+            imageFollower.textContent = imageTitle;
+            // Posicionar inicialmente donde entra el cursor
+            const rect = imageContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top + 50; // Offset para que aparezca más abajo
+            gsap.set(imageFollower, { x: x, y: y });
+          }
+          gsap.fromTo(imageFollower, 
+            { autoAlpha: 0, scale: 0.8 },
+            { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)" }
+          );
+        };
+
+        const handleImageLeave = () => {
+          gsap.to(imageFollower, { autoAlpha: 0, scale: 0.8, duration: 0.25, ease: "power2.in" });
+        };
+
+        img.addEventListener("mousemove", handleImageMove);
+        img.addEventListener("mouseenter", handleImageEnter);
+        img.addEventListener("mouseleave", handleImageLeave);
+      });
+
       gsap.from(textRef.current.querySelectorAll('h2, p'), {
-        y: -80,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power3.out",
+        y: -50, opacity: 0, duration: 0.8, stagger: 0.2,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 80%",
-          end: "top 40%",
           toggleActions: "play none none reverse"
         }
       });
 
-      // Animaciones de imágenes
-      imagesRef.current.forEach((img) => {
-        const imageEl = img.querySelector('img');
-        gsap.fromTo(
-          imageEl,
-          {
-            x: -80,
-            opacity: 0,
-            clipPath: 'inset(0 100% 0 0)',
-            webkitClipPath: 'inset(0 100% 0 0)'
-          },
-          {
-            x: 0,
-            opacity: 1,
-            clipPath: 'inset(0 0% 0 0)',
-            webkitClipPath: 'inset(0 0% 0 0)',
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: img,
-              start: "top 90%",
-              end: "80% 60%",
-              scrub: true,
-              markers: false,
-            }
-          }
-        );
-      });
-
-      // Pin solo en pantallas grandes
       ScrollTrigger.matchMedia({
         "(min-width: 768px)": function () {
           ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
             end: "bottom bottom",
-            pin: textRef.current,
             pinSpacing: false
           });
-        },
-        "(max-width: 767px)": function () {
-          // No hacemos nada, el pin queda desactivado en móviles
         }
       });
 
@@ -107,93 +144,40 @@ const Benefits = () => {
     return () => ctx.revert();
   }, []);
 
-
-  const [open, setOpen] = React.useState(false);
-  const [selectedCategory, setSelectedCategory] = React.useState(null);
-
-  const categoryMap = {
-    "React, Angular, UXUI": "Desarrollo",
-    "Diseño web": "diseño web",
-    "Diseño grafico": "diseño grafico",
-    "Producción de video": "motiongraphics y video",
-  };
-
-  const handleOpen = (cat) => {
-    const key = categoryMap[cat] || null;
-    setSelectedCategory(key);
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedCategory(null);
-  };
-
   return (
     <div className="container__benefits" ref={sectionRef} id='queincluye'>
-      <div className="container__benefits-content flex">
-        <div ref={textRef} className="width-50 fixed container__benefits-content-text flex-col">
-          <h2>Mis ultimos proyectos</h2>
-          <p>Estos son los ultimos proyectos donde he tenido la oportunidad de colaborar, utilizo multiples herramientas de diseño, codigo e inteligencia artificial asi mejorar mis habilidades y optimizar mi proceso de trabajo.</p>
+      <div className="container__benefits-content flex flex-col">
+        
+        <div 
+          ref={textRef} 
+          className="width-100 container__benefits-content-text flex-col"
+          style={{ position: 'relative' }} 
+        >
+          <span ref={followerRef} className="cursor-follower">Portafolio</span>
+          
+          <h2 
+            ref={titleRef} 
+            style={{ 
+              cursor: 'default',
+              display: 'inline-block', 
+              width: 'fit-content'
+            }}
+          >
+            PROYECTOS
+          </h2>
+
           <div style={{ height: '200px', position: 'relative', overflow: 'hidden' }}>
-            <LogoLoop
-              logos={techLogos}
-              speed={120}
-              direction="left"
-              logoHeight={48}
-              gap={40}
-              pauseOnHover
-              scaleOnHover
-              fadeOut
-              fadeOutColor="rgba(17, 17, 18, 0.952)"
-              ariaLabel="Technology partners"
-              />
+            <LogoLoop logos={techLogos} speed={120} direction="left" logoHeight={48} gap={40} pauseOnHover scaleOnHover fadeOut fadeOutColor="rgba(17, 17, 18, 0.952)" />
           </div>
         </div>
-        <div className="width-50 wrapper container__benefits-content-images">
-          <div>
-            {imagesBenefits.map((image, index) => (
-              <div
-                key={index}
-                ref={el => imagesRef.current[index] = el}
-                className="container__benefits-content-images-content"
-              >
-                <img src={image.url} alt={image.title || ""} />
-                <h3>{image.title}</h3>
-                <ul>
-                  {image.description.map((item, index) => (
-                    <li key={index}>
-                      <div className='viñeta'></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div>
-                  <Button className='btn btn-primary button_modal' onClick={() => handleOpen(image.title)}>Click para ver los proyectos</Button>
 
-                  <Modal
-                    open={open}
-                    onClose={handleClose}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
-                  >
-                    <Box sx={style}>
-                      <div className='modal'>
-                        <div className='modal-content'>
-                          <div className='modal-body'>
-                            <div className='modal__body-columns'>
-                              <div className='modal__body-column'>
-                                <CardPorfolio category={selectedCategory} />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </Box>
-                  </Modal>
-                </div>
+        <div className="width-100 wrapper container__benefits-content-images">
+            {imagesBenefits.map((image, index) => (
+              <div key={index} ref={el => imagesRef.current[index] = el} className="container__benefits-content-images-content">
+                <span ref={el => imageFollowersRef.current[index] = el} className="cursor-follower"></span>
+                <img src={image.url} alt={image.title || ""} />
               </div>
             ))}
-          </div>
         </div>
       </div>
     </div>

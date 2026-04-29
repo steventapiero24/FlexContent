@@ -23,22 +23,12 @@ const Footer = () => {
                         </li>
                         <li>
                             <a href="#proyectos" onClick={(e) => handleScroll(e, "#proyectos")}>
-                                Que incluye
+                                Mis proyectos
                             </a>
                         </li>
                         <li>
                             <a href="#sobre-nosotros" onClick={(e) => handleScroll(e, "#sobre-nosotros")}>
-                                Sobre nosotros
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#precios" onClick={(e) => handleScroll(e, "#precios")}>
-                                Tarifa
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#comparacion" onClick={(e) => handleScroll(e, "#comparacion")}>
-                                FAQs
+                                Sobre mi
                             </a>
                         </li>
                         <li>

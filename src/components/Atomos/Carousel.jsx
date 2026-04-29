@@ -10,16 +10,14 @@ const DEFAULT_ITEMS = [
     description: 'Manicurista y nail artist',
     reseña: "Todo un profesional, mi marca de uñas nunca se había visto tan bien como con su trabajo. Muy recomendable para quienes buscan calidad y creatividad y no saben mucho de diseño.",
     id: 1,
-    icon: <FiFileText className="carousel-icon" />,
-    image: "/flexemprende/img/nelanails.webp"
+    image: "/img/nelanails.webp"
   },
   {
     title: 'Laura Méndez',
     description: 'Directora de Marketing – Truvant',
     id: 2,
     reseña: "Nos crearon una identidad visual moderna y una web rápida que ha duplicado nuestras reservas online. El contenido para redes transmite exactamente la sensación de aventura que queríamos. Fue un antes y un después en nuestra marca",
-    icon: <FiCircle className="carousel-icon" />,
-    image: "/flexemprende/img/truvant.webp"
+    image: "/img/truvant.webp"
   },
   {
     title: 'Sergio Villalba',
@@ -27,7 +25,7 @@ const DEFAULT_ITEMS = [
     id: 3,
     reseña: "Lo que más nos sorprendió fue la estrategia visual que plantearon. Gracias a sus diseños y gestión de redes, ahora recibimos consultas todos los días. Son un equipo que realmente entiende el sector turístico.",
     icon: <FiLayers className="carousel-icon" />,
-    image: "/flexemprende/img/bitacora.webp"
+    image: "/img/bitacora.webp"
   },
   {
     title: 'Gloria Isabel',
@@ -35,7 +33,7 @@ const DEFAULT_ITEMS = [
     id: 4,
     reseña: "Necesitábamos una imagen profesional para competir en el mercado educativo. El branding, la web y la estrategia de contenido fueron exactamente lo que buscábamos. Ahora nuestros cursos tienen identidad, son fáciles de encontrar y se vean profesionales.",
     icon: <FiLayout className="carousel-icon" />,
-    image: "/flexemprende/img/futurovalor.webp"
+    image: "/img/futurovalor.webp"
   },
   {
     title: 'World Vision',
@@ -43,7 +41,7 @@ const DEFAULT_ITEMS = [
     id: 5,
     reseña: "El cambio de nuestra marca fue total. Nuevos colores, nuevo logo y una web que por fin refleja calidad. Las fotos y creatividades para campañas han disparado las ventas de gafas",
     icon: <FiCode className="carousel-icon" />,
-    image: "/flexemprende/img/worldvision.webp"
+    image: "/img/worldvision.webp"
   }
 ];
 
@@ -184,9 +182,6 @@ export default function Carousel({
               }}
               transition={effectiveTransition}
             >
-              <div className={`carousel-item-header ${round ? 'round' : ''}`}>
-                <span className="carousel-icon-container">{item.icon}</span>
-              </div>
               {/* render image for this carousel item when provided */}
               {item.image && (
                 <div className="carousel-item-image">

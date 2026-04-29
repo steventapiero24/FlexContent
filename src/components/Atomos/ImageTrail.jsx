@@ -227,6 +227,7 @@ export default function ImageTrail({ items = [], variant = 1 }) {
         <h4 ref={h3Ref}>Diseñador visual - motion designer.</h4>
         <h1 ref={h1Ref}>Steven Tapiero</h1>
         <p ref={pRef}>“Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo”.</p>
+        <p className='text'>Realiza Scroll para descubrir mis proyectos </p>
       </div>
       {items.map((url, i) => (
         <div className="content__img" key={i}>
