@@ -113,8 +113,9 @@
   }
   
   p {
+    width: 400px;
     color: var(--color-black);
-    line-height: 1.5rem;
+    line-height: 1.3rem;
     color: var(--color-secondary);
   }
   h1 {
@@ -124,10 +125,13 @@
 }
 
 .text {
-    color: var(--color-black) !important;
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
+  position: absolute;
+  bottom: -10rem;
+  color: var(--color-black) !important;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
 
 @media (max-width: 750px) {
   .container__hero-content {
@@ -137,7 +141,12 @@
     height: 100vh;
     .text {
       font-size: 1rem;
+      bottom: 10rem ;
     }
+  }
+  h1 {
+    line-height: 5.165rem;
+    margin-bottom: 1rem;
   }
   h4 {
     font-size: 18px;
@@ -891,7 +900,7 @@
 
 
   .Sobremi-container .falling-text-target {
-    line-height: 0.5 !important;
+    line-height: 1 !important;
   }
   .falling-text-target {
     line-height: 0.7 !important;
@@ -1032,6 +1041,8 @@
       padding: 2rem;
       margin: 0;
       margin-top: 2rem;
+      font-size: 5rem;
+      line-height: 4rem;
     }
   }
 
