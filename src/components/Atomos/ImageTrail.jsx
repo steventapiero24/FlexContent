@@ -159,7 +159,14 @@ const variantMap = {
   1: ImageTrailVariant1,
 };
 
-export default function ImageTrail({ items = [], variant = 1 }) {
+export default function ImageTrail({
+  items = [],
+  variant = 1,
+  subtitle = 'Diseñador visual - motion designer.',
+  title = 'Steven Tapiero',
+  description = '“Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo”.',
+  scrollText = 'Realiza Scroll para descubrir mis proyectos'
+}) {
   const containerRef = useRef(null);
   const h1Ref = useRef(null);
   const h3Ref = useRef(null);
@@ -224,10 +231,10 @@ export default function ImageTrail({ items = [], variant = 1 }) {
   return (
     <div className="content" ref={containerRef}>
       <div className='container__hero-content width-100'>
-        <h4 ref={h3Ref}>Diseñador visual - motion designer.</h4>
-        <h1 ref={h1Ref}>Steven Tapiero</h1>
-        <p ref={pRef}>“Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo”.</p>
-        <p className='text'>Realiza Scroll para descubrir mis proyectos </p>
+        {subtitle && <h4 ref={h3Ref}>{subtitle}</h4>}
+        {title && <h1 ref={h1Ref}>{title}</h1>}
+        {description && <p ref={pRef}>{description}</p>}
+        {scrollText && <p className='text'>{scrollText}</p>}
       </div>
       {items.map((url, i) => (
         <div className="content__img" key={i}>

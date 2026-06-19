@@ -1,12 +1,12 @@
 // Home.jsx - Sin cambios, ya está perfecto
 import React, { useLayoutEffect } from "react";
-import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import SobreNosotros from "../components/SobreNosotros";
-import Benefits from "../components/Projects";
-import SobreMi from "../components/SobreMi";
-import OtherServices from "../components/OtherServices";
-import Footer from "../components/Footer";
+import Nav from "../components/Atomos/video/Nav";
+import Hero from "../components/Atomos/video/Hero";
+import SobreNosotros from "../components/Atomos/video/SobreNosotros";
+import Benefits from "../components/Atomos/video/Projects";
+import SobreMi from "../components/Atomos/video/SobreMi";
+import OtherServices from "../components/Atomos/video/OtherServices";
+import Footer from "../components/Atomos/video/Footer";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -29,7 +29,16 @@ const Home = () => {
   return (
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        <Nav />
+        <Nav
+          menuItems={[
+            { label: 'Inicio', href: '#hero' },
+            { label: 'mis proyectos', href: '#proyectos' },
+            { label: 'Sobre mi', href: '#sobre-nosotros' },
+            { label: 'Otros servicios', href: '#otros-servicios' },
+            { label: 'Video', to: '/video' },
+            { label: 'Contacto', href: '#contacto' }
+          ]}
+        />
         <section id="hero">
           <Hero />
         </section>

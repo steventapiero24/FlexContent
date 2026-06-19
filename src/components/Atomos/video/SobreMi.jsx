@@ -1,4 +1,4 @@
- import FallingText from "./Atomos/FallingText "
+ import FallingText from "../FallingText "
  
  const SobreMi = () => {
      return (

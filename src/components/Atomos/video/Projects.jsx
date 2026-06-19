@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { imagesBenefits } from '../utils/bd';
-import LogoLoop from './Atomos/LogoLoop';
+import { imagesBenefits } from '../../../utils/bd';
+import LogoLoop from '../LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiLinkedin, SiInstagram, SiFacebook, SiTiktok, SiFigma } from 'react-icons/si';
 import Box from '@mui/material/Box';
-import CardPorfolio from './Atomos/CardPorfolio';
+import CardPorfolio from '../CardPorfolio';
 
 const style = {
   position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',

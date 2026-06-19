@@ -1,0 +1,31 @@
+/* Video Page Specific Styles */
+
+#smooth-wrapper-video {
+  width: 100%;
+  height: 100%;
+}
+
+#smooth-content-video {
+  will-change: transform;
+}
+
+/* Anchor navigation */
+#video-hero {
+  scroll-margin-top: 90px;
+}
+
+#video-portafolio {
+  scroll-margin-top: 90px;
+}
+
+#video-sobremi {
+  scroll-margin-top: 90px;
+}
+
+#video-servicios {
+  scroll-margin-top: 90px;
+}
+
+#video-contacto {
+  scroll-margin-top: 90px;
+}

@@ -1,18 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import CountUp from "./Atomos/CountUp";
-import Carousel from "./Atomos/Carousel";
+import CountUp from "../CountUp";
+import Carousel from "../Carousel";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SobreNosotros = () => {
+const VideoSobreMi = () => {
   const countersRef = useRef([]);
   const containerRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // --- Animación de los contadores
       gsap.from(countersRef.current, {
         y: -80,
         opacity: 0,
@@ -42,11 +41,9 @@ const SobreNosotros = () => {
 
       window.addEventListener("mousemove", handleMouseMove);
 
-      // --- Animación del bloque flotante ---
       const floatingEl = containerRef.current.querySelector(".container__content-floating");
       const floatingElements = floatingEl.querySelectorAll("h5, h3, p");
 
-      // Animación del contenedor completo
       gsap.from(floatingEl, {
         opacity: 0,
         y: 80,
@@ -59,7 +56,6 @@ const SobreNosotros = () => {
         },
       });
 
-      // Animación secuencial interna
       gsap.from(floatingElements, {
         y: 60,
         opacity: 0,
@@ -79,17 +75,14 @@ const SobreNosotros = () => {
     return () => ctx.revert();
   }, []);
 
-
-
-
   return (
-    <div ref={containerRef} className="container flex flex-col container__sobrenosotros">
+    <div ref={containerRef} className="container flex flex-col container__sobrenosotros" id="video-sobremi">
       <div className="Container__counters width-100 flex flex-center flex-around ">
         {[
-          { to: 30, text: "Webs diseñadas" },
-          { to: 220, text: "Contenidos generados" },
-          { to: 30, text: "Marcas creadas" },
-          { to: 6, text: "Años de experiencia" },
+          { to: 50, text: "Videos producidos" },
+          { to: 200, text: "Horas editadas" },
+          { to: 25, text: "Clientes satisfechos" },
+          { to: 5, text: "Años especializados" },
         ].map((item, i) => (
           <div
             key={i}
@@ -111,18 +104,18 @@ const SobreNosotros = () => {
 
       <div className="container__Sobrenosotroscontent">
         <div className="container__content-floating width-50">
-          <h5>Que tu trabajo visual hable por sí solo.</h5>
+          <h5>Tu visión, amplificada en video.</h5>
           <h3>
-            Donde el diseño visual y el código se encuentran
+            Donde la creatividad y la técnica se unen
           </h3>
           <p>
-            Por eso siempre me esfuerzo para que cada uno de mis proyectos sean coherentes y profesionales. Diseño interfaces intuitivas y las materializo con código limpio y escalable. Mi enfoque es simple: crear productos digitales que se sientan tan bien como se ven.
+            Sabemos que el contenido de video es el futuro. Por eso, cada frame cuenta una historia, cada transición es precisa y cada sonido eleva el impacto. Combinamos edición técnica de nivel profesional con storytelling que conecta emocionalmente con tu audiencia.
           </p>
           <button
             className="btn btn-secondary width-100"
             onClick={() =>
               window.open(
-                "https://wa.me/34614054834?text=Hola,%20me%20gustaría%20obtener%20más%20información",
+                "https://wa.me/34614054834?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20edición%20de%20video",
                 "_blank"
               )
             }
@@ -139,7 +132,7 @@ const SobreNosotros = () => {
             pauseOnHover={true}
             loop={true}
             round={false}
-            />
+          />
           <Carousel
             className="mobile"
             baseWidth={360}
@@ -155,4 +148,4 @@ const SobreNosotros = () => {
   );
 };
 
-export default SobreNosotros;
+export default VideoSobreMi;

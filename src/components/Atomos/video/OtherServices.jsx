@@ -1,4 +1,4 @@
-import CardOtherServices from './Atomos/CardOtherServices'
+import CardOtherServices from '../CardOtherServices'
 
 const OtherServices = () => {
     return (

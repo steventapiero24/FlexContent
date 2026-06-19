@@ -24,7 +24,11 @@
 }
 
 .container_menu img {
-  height: 100%;
+  min-height: 65px;
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 100%;
 }
 
 .menu ul {
@@ -53,7 +57,11 @@
     padding: .5rem;
   }
   .container_menu img {
-    height: 100%;
+    min-height: 65px;
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 100%;
   }
   .menu__contact {
     width: 50%;
@@ -965,8 +973,6 @@
 .MuiAccordion-heading svg {
   color: var(--color-secondary) !important;
 }
-
-;
 
 .css-1lj39kh-MuiAccordionDetails-root {
   background-color: #363636 !important;
