@@ -1,12 +1,16 @@
 /* Video Page Specific Styles */
 
+@import url("https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&display=swap");
+
 #smooth-wrapper-video {
   width: 100%;
   height: 100%;
+  font-family: "Clash Display", "Inter", sans-serif;
 }
 
 #smooth-content-video {
   will-change: transform;
+  font-family: inherit;
 }
 
 /* Anchor navigation */

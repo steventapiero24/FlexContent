@@ -1,173 +1,144 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { imagesBenefits } from '../../../utils/bd';
-import LogoLoop from '../LogoLoop';
-import { SiReact, SiTailwindcss, SiDavinciresolve, SiCinema4D, SiAdobepremierepro, SiAdobeaftereffects, SiAdobephotoshop } from 'react-icons/si';
-import CardPorfolio from '../CardPorfolio';
+import React, { useMemo, useRef, useState } from "react";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import { imagesBenefits } from "../../../utils/bd";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const techLogos = [
-  { node: <SiAdobepremierepro />, title: "Premiere Pro", href: "https://www.adobe.com/products/premiere.html" },
-  { node: <SiAdobeaftereffects />, title: "After Effects", href: "https://www.adobe.com/products/aftereffects.html" },
-  { node: <SiCinema4D />, title: "Cinema 4D", href: "https://www.maxon.net/en-us/products/cinema-4d/" },
-  { node: <SiDavinciresolve />, title: "Davinci Resolve", href: "https://www.blackmagicdesign.com/products/davinciresolve" },
-  { node: <SiAdobephotoshop />, title: "Photoshop", href: "https://www.adobe.com/products/photoshop.html" },
+const previewVideos = [
+  "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+  "https://www.w3schools.com/html/mov_bbb.mp4",
+  "https://cdn.coverr.co/videos/coverr-a-man-writing-in-a-notebook-1348/1080p.mp4",
+  "https://cdn.coverr.co/videos/coverr-slow-motion-shot-of-a-camera-filming-a-city-scape-8138/1080p.mp4"
 ];
 
 const VideoProjects = () => {
-  const sectionRef = useRef(null);
-  const textRef = useRef(null);
-  const titleRef = useRef(null);
-  const followerRef = useRef(null);
-  const imagesRef = useRef([]);
-  const imageFollowersRef = useRef([]);
+  const [activeVideo, setActiveVideo] = useState(null);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartXRef = useRef(0);
+  const dragOffsetStartRef = useRef(0);
+  const dragDeltaRef = useRef(0);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const follower = followerRef.current;
-      const title = titleRef.current;
+  const videos = useMemo(
+    () =>
+      imagesBenefits.map((item, index) => ({
+        ...item,
+        videoUrl: item.videoUrl || previewVideos[index % previewVideos.length],
+      })),
+    []
+  );
 
-      gsap.set(follower, { xPercent: -50, yPercent: -50 });
+  const reelVideos = useMemo(() => [...videos, ...videos, ...videos, ...videos], [videos]);
 
-      imageFollowersRef.current.forEach(follower => {
-        if (follower) gsap.set(follower, { xPercent: -50, yPercent: -50 });
-      });
+  const openVideo = (index) => {
+    setActiveVideo(videos[index % videos.length]);
+  };
 
-      const handleMove = (e) => {
-        const rect = textRef.current.getBoundingClientRect();
-        
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+  const closeVideo = () => {
+    setActiveVideo(null);
+  };
 
-        gsap.to(follower, {
-          x: x,
-          y: y,
-          duration: 0.1, 
-          ease: "none"
-        });
-      };
+  const handlePointerDown = (event) => {
+    setIsDragging(true);
+    dragStartXRef.current = event.clientX;
+    dragOffsetStartRef.current = dragOffset;
+    dragDeltaRef.current = 0;
+  };
 
-      const handleEnter = () => {
-        gsap.to(follower, { autoAlpha: 1, duration: 0.2 });
-      };
+  const handlePointerMove = (event) => {
+    if (!isDragging) return;
+    const delta = event.clientX - dragStartXRef.current;
+    dragDeltaRef.current = delta;
+    setDragOffset(dragOffsetStartRef.current + delta);
+  };
 
-      const handleLeave = () => {
-        gsap.to(follower, { autoAlpha: 0, duration: 0.2 });
-      };
+  const handlePointerUp = () => {
+    setIsDragging(false);
+    dragDeltaRef.current = 0;
+  };
 
-      if (title) {
-        title.addEventListener("mousemove", handleMove);
-        title.addEventListener("mouseenter", handleEnter);
-        title.addEventListener("mouseleave", handleLeave);
-      }
-
-      imagesRef.current.forEach((imageContainer, index) => {
-        if (!imageContainer) return;
-        
-        const img = imageContainer.querySelector('img');
-        const imageFollower = imageFollowersRef.current[index];
-        if (!img || !imageFollower) return;
-
-        const imageTitle = imagesBenefits[index]?.title || '';
-
-        const handleImageMove = (e) => {
-          const rect = imageContainer.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top + 50;
-
-          gsap.to(imageFollower, {
-            x: x,
-            y: y,
-            duration: 0.5,
-            ease: "power2.out"
-          });
-        };
-
-        const handleImageEnter = (e) => {
-          if (imageFollower) {
-            imageFollower.textContent = imageTitle;
-            const rect = imageContainer.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top + 50;
-            gsap.set(imageFollower, { x: x, y: y });
-          }
-          gsap.fromTo(imageFollower, 
-            { autoAlpha: 0, scale: 0.8 },
-            { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)" }
-          );
-        };
-
-        const handleImageLeave = () => {
-          gsap.to(imageFollower, { autoAlpha: 0, scale: 0.8, duration: 0.25, ease: "power2.in" });
-        };
-
-        img.addEventListener("mousemove", handleImageMove);
-        img.addEventListener("mouseenter", handleImageEnter);
-        img.addEventListener("mouseleave", handleImageLeave);
-      });
-
-      gsap.from(textRef.current.querySelectorAll('h2, p'), {
-        y: -50, opacity: 0, duration: 0.8, stagger: 0.2,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse"
-        }
-      });
-
-      ScrollTrigger.matchMedia({
-        "(min-width: 768px)": function () {
-          ScrollTrigger.create({
-            trigger: sectionRef.current,
-            start: "top top",
-            end: "bottom bottom",
-            pinSpacing: false
-          });
-        }
-      });
-
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const handleCardClick = (event, index) => {
+    if (Math.abs(dragDeltaRef.current) > 4) {
+      event.preventDefault();
+      return;
+    }
+    openVideo(index);
+  };
 
   return (
-    <div className="container__benefits" ref={sectionRef} id='video-portafolio'>
+    <div className="container__benefits" id="video-portafolio">
       <div className="container__benefits-content flex flex-col">
-        
-        <div 
-          ref={textRef} 
-          className="width-100 container__benefits-content-text flex-col"
-          style={{ position: 'relative' }} 
-        >
-          <span ref={followerRef} className="cursor-follower">Portafolio</span>
-          
-          <h2 
-            ref={titleRef} 
-            style={{ 
-              cursor: 'default',
-              display: 'inline-block', 
-              width: 'fit-content'
-            }}
-          >
-            Portafolio
-          </h2>
+        <div className="container__benefits-header">
+          <p className="container__benefits-eyebrow">Portafolio</p>
+          <h2>Reels verticales</h2>
+        </div>
 
-          <div style={{ height: '200px', position: 'relative', overflow: 'hidden' }}>
-            <LogoLoop logos={techLogos} speed={120} direction="left" logoHeight={48} gap={40} pauseOnHover scaleOnHover fadeOut fadeOutColor="rgba(17, 17, 18, 0.952)" />
+        <div className="video-reel-wrapper">
+          <div
+            className={`video-reel-track ${isDragging ? "is-dragging" : ""}`}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerLeave={handlePointerUp}
+            style={{ transform: `translateX(${dragOffset}px)` }}
+          >
+            {reelVideos.map((video, index) => (
+              <article
+                key={`${video.title}-${index}`}
+                className="video-reel-card"
+                onClick={(event) => handleCardClick(event, index)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openVideo(index);
+                  }
+                }}
+              >
+                <video
+                  src={video.videoUrl}
+                  poster={video.url}
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                  preload="metadata"
+                  className="video-reel-video"
+                />
+                <div className="video-reel-overlay">
+                  <span>{video.title}</span>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
 
-        <div className="width-100 wrapper container__benefits-content-images">
-            {imagesBenefits.map((image, index) => (
-              <div key={index} ref={el => imagesRef.current[index] = el} className="container__benefits-content-images-content">
-                <span ref={el => imageFollowersRef.current[index] = el} className="cursor-follower"></span>
-                <img src={image.url} alt={image.title || ""} />
-              </div>
-            ))}
-        </div>
+        <Modal
+          open={Boolean(activeVideo)}
+          onClose={closeVideo}
+          aria-labelledby="video-modal-title"
+          className="video-modal"
+        >
+          <Box className="video-modal__content" onClick={(e) => e.stopPropagation()}>
+            <IconButton className="video-modal__close" onClick={closeVideo} aria-label="Cerrar video">
+              <CloseIcon />
+            </IconButton>
+            <video
+              src={activeVideo?.videoUrl}
+              poster={activeVideo?.url}
+              controls
+              autoPlay
+              playsInline
+              className="video-modal__video"
+            />
+            <div className="video-modal__meta">
+              <h3 id="video-modal-title">{activeVideo?.title}</h3>
+              {activeVideo?.description && <p>{Array.isArray(activeVideo.description) ? activeVideo.description.join(" • ") : activeVideo.description}</p>}
+            </div>
+          </Box>
+        </Modal>
       </div>
     </div>
   );
